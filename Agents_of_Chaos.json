@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1633520064,
-		"dateLastModified": 1633520064
+		"dateAdded": 1633520348,
+		"dateLastModified": 1633520348
 	},
 	"monster": [
 		{
@@ -579,16 +579,16 @@
 					]
 				},
 				{
+					"name": "Slam",
+					"entries": [
+						"The deerclops slams a creature {@condition grappled} by it on the floor, dealing 14 {@damage 2d6 + 7} bludgeoning damage plus 59 {@damage 8d12 + 7} piercing damage if slammed on the Ice Spikes, and is knocked {@condition prone}."
+					]
+				},
+				{
 					"name": "Ice Stomp {@recharge 5}",
 					"entries": [
 						"The deerclops stomps on the floor, creating 5ft. tall ice spikes in a 20 ft. radius area centered on itself. Each creature in that area must make a {@dc 18} Dexterity saving throw, taking 36 ({@damage 8d12 + 7}) piercing damage on a failed save, or half as much damage on a successful one.",
 						"The area becomes difficult terrain for the duration. When a creature ends its turn into the area or moves into or within the area, it takes {@damage 2d4} cold damage for every 5 feet it travels."
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"The deerclops slams a creature {@condition grappled} by it on the floor, dealing 14 {@damage 2d6 + 7} bludgeoning damage plus 59 {@damage 8d12 + 7} piercing damage if slammed on the Ice Spikes, and is knocked {@condition prone}."
 					]
 				}
 			],
@@ -599,13 +599,6 @@
 						"href": {
 							"type": "external",
 							"url": "https://pm1.narvii.com/7122/90543c83d8ef8436dbc9dedb8f805aca91492d30r1-554-554v2_hq.jpg"
-						}
-					},
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7b3ff19c-ffec-4025-902f-b9f54b2d525a/dbij2yt-967593a4-8298-4ca2-9c25-d910d64c04ff.png/v1/fill/w_1226,h_652,q_70,strp/deerclops__don_t_starve__by_snook_8_dbij2yt-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzEyIiwicGF0aCI6IlwvZlwvN2IzZmYxOWMtZmZlYy00MDI1LTkwMmYtYjlmNTRiMmQ1MjVhXC9kYmlqMnl0LTk2NzU5M2E0LTgyOTgtNGNhMi05YzI1LWQ5MTBkNjRjMDRmZi5wbmciLCJ3aWR0aCI6Ijw9MTMzOCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.-CQduDzWGmGl5pDNnGCUwaH5v03pSwKa2BjA0Jf0VDE"
 						}
 					}
 				]
