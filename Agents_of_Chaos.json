@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1635338811,
-		"dateLastModified": 1635338811
+		"dateAdded": 1635361685,
+		"dateLastModified": 1635361685
 	},
 	"monster": [
 		{
@@ -1301,6 +1301,12 @@
 					"entries": [
 						"At the start of each of the dragon golem's turns, each creature within 5 feet of it takes 10 ({@damage 3d6}) lightning damage. A creature that touches the dragon golem or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) lightning damage."
 					]
+				},
+				{
+					"name": "Iddle Recharge",
+					"entries": [
+						"At the start of its turn, if the dragon golem has not used any legendary actions until the end of its last turn, the dragon golem recharges its elemental breath."
+					]
 				}
 			],
 			"action": [
@@ -1308,6 +1314,12 @@
 					"name": "Multiattack",
 					"entries": [
 						"The dragonflesh golem uses Terror Stare. It then makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Terror Stare",
+					"entries": [
+						"The dragonflesh golem chooses a creature that can see its eyes within 30 feet of it. The target must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the golem's Terror Stare for the next 24 hours."
 					]
 				},
 				{
@@ -1323,30 +1335,30 @@
 					]
 				},
 				{
-					"name": "Terror Stare",
-					"entries": [
-						"The dragonflesh golem chooses a creature that can see its eyes within 30 feet of it. The target must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the golem's Terror Stare for the next 24 hours."
-					]
-				},
-				{
 					"name": "Elemental Breath {@recharge 5}",
 					"entries": [
-						"The dragonflesh golem exhales energy in a 30-foot cone. Each creature in that area must make a {@dc 19} Dexterity saving throw, taking 33 ({@damage 6d10}) lightning damage and 33 ({@damage 6d10}) damage of another type on a failed save, or half as much damage on a successful one. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
+						"The dragonflesh golem exhales energy in a 30-foot cone. Each creature in that area must make a {@dc 19} Dexterity saving throw, taking 28 ({@damage 8d6}) lightning damage and 28 ({@damage 8d6}) damage of another type on a failed save, or half as much damage on a successful one. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
 					]
 				}
 			],
 			"legendaryActions": 3,
 			"legendary": [
 				{
-					"name": "Lightning Nova (Costs 2 Actions)",
+					"name": "Move",
 					"entries": [
-						"The dragon golem charges to a location and a burst of lightning erupts from it. Each creature within a range of 15-foot from the dragon golem must succeed on a {@dc 20} Constitution saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save or half as much on a success."
+						"The dragon golem can move up to its speed without causing attack of opportunity."
 					]
 				},
 				{
-					"name": "Claw",
+					"name": "Claws",
 					"entries": [
-						"The dragon golem makes a claw attack."
+						"The dragon golem make a claw attack."
+					]
+				},
+				{
+					"name": "Lightning Nova (Costs 2 Actions)",
+					"entries": [
+						"A burst of lightning erupts from the dragon golem. Each creature within a range of 15-foot from the dragon golem must succeed on a {@dc 19} Constitution saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save or half as much on a success."
 					]
 				}
 			],
@@ -1420,7 +1432,7 @@
 					}
 				]
 			},
-			"tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/token/Dragonflesh Golem (Token).png",
+			"tokenUrl": "https://i.imgur.com/bWWEeOO.png",
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance",
