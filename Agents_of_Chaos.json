@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.138.1",
+	"siteVersion": "1.140.0",
 	"_meta": {
 		"sources": [
 			{
@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1633520991,
-		"dateLastModified": 1633520991
+		"dateAdded": 1635338811,
+		"dateLastModified": 1635338811
 	},
 	"monster": [
 		{
@@ -563,6 +563,12 @@
 					"entries": [
 						"The deerclops ignores the extra movement cost of difficult terrains and have advantage to Strength (Athletics) saving throws to resist being {@condition restrained}."
 					]
+				},
+				{
+					"name": "Abyssal Eye",
+					"entries": [
+						"The deerclops can see through magical darkness as if it was normal darkness."
+					]
 				}
 			],
 			"action": [
@@ -726,6 +732,12 @@
 					"entries": [
 						"While in dim light or darkness, the terrorbeak can take the Hide action as a bonus action."
 					]
+				},
+				{
+					"name": "Shadow Eyes",
+					"entries": [
+						"The terrorbeak can see through magical darkness as if it was normal darkness."
+					]
 				}
 			],
 			"action": [
@@ -824,6 +836,12 @@
 					"entries": [
 						"The crawling horror have a 20-foot radius darkness aura."
 					]
+				},
+				{
+					"name": "Shadow Eyes",
+					"entries": [
+						"The crawling horror can see through magical darkness as if it was normal darkness."
+					]
 				}
 			],
 			"action": [
@@ -872,6 +890,564 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Bomb",
+			"source": "AgentsofCaos",
+			"size": "M",
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 16,
+			"int": 6,
+			"wis": 10,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Ignan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fire Form",
+					"entries": [
+						"The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d10}) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 ({@damage 1d10}) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage."
+					]
+				},
+				{
+					"name": "Unstable Form",
+					"entries": [
+						"When the bomb is damaged by 1/3 its total hit points (25), it becomes large by inflating, loses its Fire Form and can self-destruct.",
+						"When the bomb reach 0 hit point, the Self-Destruction action is used, but dealing half its damage."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The elemental makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+					]
+				},
+				{
+					"name": "Self-Destruct",
+					"entries": [
+						"The bomb loses stability and explodes ins a hurl of flames.",
+						"Each creature in a 20-foot-radius sphere centered on itself must make a {@dc 15} Dexterity saving throw. A target takes 28 ({@damage 8d6}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"desert"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"A faint humanoid shape threads through the core of this wild, moving flame. A fire elemental is a force of capricious devastation. Wherever it moves, it sets its surroundings ablaze, turning the world to ash, smoke, and cinders. Water can halt its destructive progress, causing the fire elemental to shrink back, hissing and smoking in pain and rage."
+								]
+							}
+						]
+					},
+					"Elementals are incarnations of the elements that make up the universe: air, earth, fire, and water. Though little more than animated energy on their own planes of existence, they can be called on by spellcasters and powerful beings to take shape and perform tasks.",
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Living Elements",
+										"entries": [
+											"On its home plane, an elemental is a bodiless life force. Its dim consciousness manifests as a physical shape only when focused by the power of magic. A wild spirit of elemental force has no desire except to course through the element of its native plane. Like beasts of the Material Plane, these elemental spirits have no society or culture, and little sense of being."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Conjured by Magic",
+										"entries": [
+											"Certain spells and magic items can conjure an elemental, summoning it from the Inner Planes to the Material Plane. Elementals instinctively resent being pulled from their native planes and bound into service. A creature that summons an elemental must assert force of will to control it."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Bound and Shaped",
+										"entries": [
+											"Powerful magic can bind an elemental spirit into a material template that defines a specific use and function. Invisible stalkers are air elementals bound to a specific form, in the same way that water elementals can be shaped into water weirds."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Elemental Nature",
+										"entries": [
+											"An elemental doesn't require air, food, drink, or sleep."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://s3.amazonaws.com/files.d20.io/images/250043106/OPNzZslEpU6mJPocD2D8zQ/med.png?1634048291"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/eDFoTW2.png",
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"IG"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Campestri",
+			"source": "AgentsofCaos",
+			"size": "T",
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 1,
+			"dex": 7,
+			"con": 10,
+			"int": 4,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands Common but speaks only through the use of its Mimicry trait"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
+					]
+				},
+				{
+					"name": "Spore's Opera",
+					"entries": [
+						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must roll a {@dice 1d4} and make a {@dc 10} saving throw according to the effect. On a failed save suffer one of the conditions below.",
+						"1. (Dissonant Wispers) The creature use its reaction to run all its move speed away from the campestri.",
+						"2. (Charm Prson): The creature is {@condition charmed} by the campestri.",
+						"3. (Mind Sliver) Intelligence: ",
+						"4. (Tasha's Hideous Laughter) Wisdom: The creature falls into fits of laughter, falling {@contidion prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
+						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
+						"5. (Vicious Mockery): "
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Head Butt",
+					"entries": [
+						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 bludgeoning damage."
+					]
+				},
+				{
+					"name": "Spores (1/Day)",
+					"entries": [
+						"A 5-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"fluff": {
+				"name": "Campestri",
+				"source": "WBtW",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
+							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
+							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/WBtW/Campestri.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
+			"senseTags": [
+				"T"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dragon Golem",
+			"source": "AgentsofCaos",
+			"size": "L",
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "21d10 + 126",
+				"average": 241
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 7,
+			"con": 22,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"athletics": "+12"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"poison"
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with adamantine weapons"
+				},
+				{
+					"immune": [
+						"lightning"
+					]
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"The golem is immune to any spell or effect that would alter its form."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The golem has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"The golem's weapon attacks are magical."
+					]
+				},
+				{
+					"name": "Lightning Aura",
+					"entries": [
+						"At the start of each of the dragon golem's turns, each creature within 5 feet of it takes 10 ({@damage 3d6}) lightning damage. A creature that touches the dragon golem or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) lightning damage."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dragonflesh golem uses Terror Stare. It then makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d10 + 6}) piercing damage plus 5 ({@damage 1d10}) lightning damage plus 3 ({@damage 1d6}) damage of another type. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}16 ({@damage 3d6 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Terror Stare",
+					"entries": [
+						"The dragonflesh golem chooses a creature that can see its eyes within 30 feet of it. The target must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the golem's Terror Stare for the next 24 hours."
+					]
+				},
+				{
+					"name": "Elemental Breath {@recharge 5}",
+					"entries": [
+						"The dragonflesh golem exhales energy in a 30-foot cone. Each creature in that area must make a {@dc 19} Dexterity saving throw, taking 33 ({@damage 6d10}) lightning damage and 33 ({@damage 6d10}) damage of another type on a failed save, or half as much damage on a successful one. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
+					]
+				}
+			],
+			"legendaryActions": 3,
+			"legendary": [
+				{
+					"name": "Lightning Nova (Costs 2 Actions)",
+					"entries": [
+						"The dragon golem charges to a location and a burst of lightning erupts from it. Each creature within a range of 15-foot from the dragon golem must succeed on a {@dc 20} Constitution saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save or half as much on a success."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"The dragon golem makes a claw attack."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Dragon Golem",
+				"source": "AgentsofCaos"
+			},
+			"environment": [
+				"arctic",
+				"badlands",
+				"coastal",
+				"desert",
+				"farmland",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain",
+				"Planar",
+				"swamp",
+				"underdark",
+				"underwater",
+				"urban"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"A hulking being with a dragon's head and a patchwork of black, blue, green, red, and white scales for skin lurches forward on two legs, raising clawed fists into the air. Dragonflesh golems are rare constructs created from the remains of dead chromatic dragons."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Built from Dragon Corpses",
+										"entries": [
+											"Dragonflesh golems are powerful, but building such a creature requires great expense beyond the normal costs to create most other golems. The crafter must use the remains of five dragons, one of each color, of adult age or older. Mages looking to construct dragonflesh golems often hire adventurers to acquire the bodies they need."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Powered by Dragon Blood",
+										"entries": [
+											"Dragonflesh golems require frequent infusions of dragon blood to remain operational. This blood does not need to come from a true dragon; any creature with draconic blood will suffice."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Construct Nature",
+										"entries": [
+											"The dragonflesh golem doesn't require air, food, drink, or sleep."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Dragonflesh Golem.webp"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/token/Dragonflesh Golem (Token).png",
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
 		}
 	]
 }
