@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.140.0",
+	"siteVersion": "1.141.2",
 	"_meta": {
 		"sources": [
 			{
@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1635361685,
-		"dateLastModified": 1635361685
+		"dateAdded": 1636571332,
+		"dateLastModified": 1636571332
 	},
 	"monster": [
 		{
@@ -1127,7 +1127,7 @@
 			],
 			"passive": 14,
 			"languages": [
-				"understands Common but speaks only through the use of its Mimicry trait"
+				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
 			],
 			"cr": "0",
 			"trait": [
@@ -1140,13 +1140,13 @@
 				{
 					"name": "Spore's Opera",
 					"entries": [
-						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must roll a {@dice 1d4} and make a {@dc 10} saving throw according to the effect. On a failed save suffer one of the conditions below.",
-						"1. (Dissonant Wispers) The creature use its reaction to run all its move speed away from the campestri.",
-						"2. (Charm Prson): The creature is {@condition charmed} by the campestri.",
-						"3. (Mind Sliver) Intelligence: ",
-						"4. (Tasha's Hideous Laughter) Wisdom: The creature falls into fits of laughter, falling {@contidion prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
-						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.",
-						"5. (Vicious Mockery): "
+						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must make a {@dc 10} saving throw according to the color of the campestri.",
+						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
+						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
+						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
+						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
+						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
+						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
 					]
 				}
 			],
@@ -1165,8 +1165,6 @@
 				}
 			],
 			"fluff": {
-				"name": "Campestri",
-				"source": "WBtW",
 				"entries": [
 					{
 						"type": "entries",
@@ -1181,8 +1179,8 @@
 					{
 						"type": "image",
 						"href": {
-							"type": "internal",
-							"path": "bestiary/WBtW/Campestri.jpg"
+							"type": "external",
+							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
 						}
 					}
 				]
@@ -1192,7 +1190,8 @@
 				"T"
 			],
 			"languageTags": [
-				"C"
+				"C",
+				"S"
 			],
 			"damageTags": [
 				"B"
@@ -1460,6 +1459,289 @@
 			"conditionInflict": [
 				"frightened"
 			]
+		},
+		{
+			"name": "Gibberling Aberration",
+			"shortName": "Aberration",
+			"source": "AgentsofCaos",
+			"size": "H",
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				19
+			],
+			"hp": {
+				"formula": "17d10 + 119",
+				"average": 212
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 24,
+			"int": 3,
+			"wis": 14,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 12,
+			"conditionImmune": [
+				"grappled",
+				"prone"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Aberrant Ground",
+					"entries": [
+						"The ground in a 15-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 18} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+					]
+				},
+				{
+					"name": "Gibbering",
+					"entries": [
+						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 30 feet of the horror and can hear the gibbering must succeed on a {@dc 19} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
+					]
+				},
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The aberration can move through a space as narrow as 1 inch wide without squeezing."
+					]
+				},
+				{
+					"name": "Slimy",
+					"entries": [
+						"Attacking the aberration with a melee attack causes the weapon to get stuck on the aberration. On a melee attack, the creature must make a {@dc 17} Strength (athletics) or lose the weapon and the other attacks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gibbering aberration uses Engulf. It then makes two Pseudopod Bite attacks, and if it can, uses its Blinding Spittle."
+					]
+				},
+				{
+					"name": "Pseudopod Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 15 ft., one creature. {@h}15 ({@damage 3d8 + 2}) piercing damage. If the target is Large or smaller, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone} and {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the horror can't use the same pseudopod bite on another target. If the horror starts its turn grappling with a creature, it can use a bonus action to pull that creature within 5 feet of it."
+					]
+				},
+				{
+					"name": "Engulf",
+					"entries": [
+						"The aberration moves up to its speed. While doing so, it can enter Medium or smaller creatures' spaces. Whenever the horror enters a creature's space, the creature must make a {@dc 19} Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the horror. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the horror enters the creature's space, and the creature takes 29 ({@damage 6d8 + 2}) piercing damage and is engulfed. While engulfed, the creature is {@condition blinded}, can't breathe, and {@condition restrained}, and takes 9 ({@damage 2d8}) piercing damage and 9 ({@damage 2d8}) acid damage at the start of each of the horror's turns. lf the target is killed by this damage, it is absorbed into the horror. When the horror moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a {@dc 13} Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the horror. The horror can have only up to two Medium or small creatures engulfed at a time."
+					]
+				},
+				{
+					"name": "Blinding Spittle {@recharge 5}",
+					"entries": [
+						"The aberration spits a blood ball at a point it can see within 20 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 16} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
+					]
+				},
+				{
+					"name": "Sorrowful Screech (Recharges on Dawn)",
+					"entries": [
+						"The aberration emits a terrible scream audible within 300 feet. Creatures within 30 feet of the aberration must succeed on a {@dc 19} Wisdom saving throw or be {@condition stunned} until the end of the aberration's next turn."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gibbering Aberration",
+				"source": "AgentsofCaos"
+			},
+			"environment": [
+				"swamp",
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/818155652891148309/906977643520479283/Carta_Utogh.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://cdn.discordapp.com/attachments/818155652891148309/906977621932392468/Utogh.png",
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained",
+				"stunned"
+			]
+		},
+		{
+			"name": "Campestri Opera",
+			"source": "AgentsofCaos",
+			"size": "M",
+			"type": {
+				"type": "plant",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8",
+				"average": 27
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 3,
+			"dex": 7,
+			"con": 10,
+			"int": 4,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"languages": [
+				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
+					]
+				},
+				{
+					"name": "Spore's Opera",
+					"entries": [
+						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must make a {@dc 10} saving throw according to the color of the campestri.",
+						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
+						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
+						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
+						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
+						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
+						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
+					]
+				},
+				{
+					"name": "Swarm (Swarm of Rats)",
+					"entries": [
+						"The campestri opera can occupy another creature's space and vice versa, and the swarm can move through any opening large enough to accommodate an individual campestri. The swarm can't regain hit points or gain temporary hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Head Butt",
+					"entries": [
+						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h} 10 ({@damage 4d4}) bludgeoning damage, or 5 ({@damage 2d4}) bludgeoning damage if the swarm has half its hit points or fewer."
+					]
+				},
+				{
+					"name": "Spores (1/Day)",
+					"entries": [
+						"A 5-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
+							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
+							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
+			"senseTags": [
+				"T"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }
