@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.141.2",
+	"siteVersion": "1.145.1",
 	"_meta": {
 		"sources": [
 			{
@@ -15,466 +15,10 @@
 				]
 			}
 		],
-		"dateAdded": 1636571332,
-		"dateLastModified": 1636571332
+		"dateAdded": 1639417688,
+		"dateLastModified": 1639417688
 	},
 	"monster": [
-		{
-			"name": "Queen Charlie",
-			"shortName": "Charlie",
-			"source": "AgentsofCaos",
-			"size": "M",
-			"type": "fiend",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 112,
-				"formula": "15d8 + 45"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 16,
-			"wis": 14,
-			"cha": 16,
-			"skill": {
-				"deception": "+6",
-				"insight": "+5",
-				"perception": "+5",
-				"stealth": "+5"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 16,
-			"resist": [
-				"cold",
-				"fire",
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks that aren't silvered",
-					"cond": true
-				}
-			],
-			"conditionImmune": [
-				"charmed"
-			],
-			"languages": [
-				"Abyssal",
-				"Common",
-				"Infernal",
-				"Primordial"
-			],
-			"cr": {
-				"cr": "5",
-				"coven": "7"
-			},
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save {@dc 14}, {@hit 6} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell detect magic}",
-						"{@spell magic missile}"
-					],
-					"daily": {
-						"2e": [
-							"{@spell plane shift} (self only)",
-							"{@spell ray of enfeeblement}",
-							"{@spell sleep}"
-						]
-					},
-					"ability": "cha",
-					"type": "spellcasting"
-				}
-			],
-			"trait": [
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"Charlie has advantage on saving throws against spells and other magical effects."
-					]
-				},
-				{
-					"name": "Charlie Items",
-					"entries": [
-						"Charlie carries two very rare magic items that she must craft for herself. If either object is lost, Charlie will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
-						"Heartstone: This lustrous black gem allows Charlie to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.",
-						"Soul Bag: When an evil humanoid dies as a result of Charlie's Nightmare Haunting, Charlie catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only Charlie can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag)."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claws (Hag Form Only)",
-					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) slashing damage."
-					]
-				},
-				{
-					"name": "Change Shape",
-					"entries": [
-						"Charlie magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies."
-					]
-				},
-				{
-					"name": "Etherealness",
-					"entries": [
-						"Charlie magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, Charlie must have a heartstone in her possession."
-					]
-				},
-				{
-					"name": "Nightmare Haunting (1/Day)",
-					"entries": [
-						"While on the Ethereal Plane, Charlie magically touches a sleeping humanoid on the Material Plane. A {@spell protection from evil and good} spell cast on the target prevents this contact, as does a magic circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 ({@dice 1d10}). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the  {@spell greater restoration} spell or similar magic."
-					]
-				}
-			],
-			"legendaryGroup": {
-				"name": "Night Hag",
-				"source": "MM"
-			},
-			"variant": [
-				{
-					"type": "inset",
-					"name": "Hag Covens",
-					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
-						{
-							"type": "spellcasting",
-							"name": "Shared Spellcasting (Coven Only)",
-							"headerEntries": [
-								"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
-							],
-							"spells": {
-								"1": {
-									"slots": 4,
-									"spells": [
-										"{@spell identify}",
-										"{@spell ray of sickness}"
-									]
-								},
-								"2": {
-									"slots": 3,
-									"spells": [
-										"{@spell hold person}",
-										"{@spell locate object}"
-									]
-								},
-								"3": {
-									"slots": 3,
-									"spells": [
-										"{@spell bestow curse}",
-										"{@spell counterspell}",
-										"{@spell lightning bolt}"
-									]
-								},
-								"4": {
-									"slots": 3,
-									"spells": [
-										"{@spell phantasmal killer}",
-										"{@spell polymorph}"
-									]
-								},
-								"5": {
-									"slots": 2,
-									"spells": [
-										"{@spell contact other plane}",
-										"{@spell scrying}"
-									]
-								},
-								"6": {
-									"slots": 1,
-									"spells": [
-										"{@spell eyebite}"
-									]
-								}
-							},
-							"footerEntries": [
-								"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Hag Eye",
-							"entries": [
-								"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-								"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
-							]
-						}
-					]
-				}
-			],
-			"environment": [
-				"hades"
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									"Sly and subversive, night hags want to see the virtuous turn to villainy: love turned into obsession, kindness turned to hate, devotion to disregard, and generosity to selfishness. Night hags take perverse joy in corrupting mortals.",
-									"Night hags were once creatures of the Feywild, but their foulness saw them exiled to Hades long ago, where they degenerated into fiends. The night hags have long since spread across the Lower Planes.",
-									{
-										"type": "entries",
-										"name": "Soulmongers",
-										"entries": [
-											"While a humanoid sleeps, a night hag can straddle the person ethereally and intrude upon its dreams. Any creature with {@sense truesight} can see the hag's spectral form straddling its prey. The ethereal hag fills her victim's head with doubts and fears, in the hope of tricking it into performing evil acts in the waking world. The hag continues her nightly visitations until the victim finally expires in its sleep. If the hag has driven her victim to commit evil deeds, she traps its corrupted soul in her soul bag (see the \"Night Hag Items\" sidebar) for transport to Hades."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Covens",
-										"entries": [
-											"A night hag that is part of a coven (see the \"Hag Covens\" sidebar) has a challenge rating of 7 (2,900 XP)."
-										]
-									},
-									{
-										"type": "inset",
-										"name": "Night Hag Items",
-										"entries": [
-											"A night hag carries two very rare magic items that she must craft for herself. If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
-											{
-												"type": "entries",
-												"name": "Heartstone",
-												"entries": [
-													"This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days."
-												]
-											},
-											{
-												"type": "entries",
-												"name": "Soul Bag",
-												"entries": [
-													"When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag)."
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"type": "section",
-						"name": "Hags",
-						"entries": [
-							"Hags represent all that is evil and cruel. Though they resemble withered crones, there is nothing mortal about these monstrous creatures, whose forms reflect only the wickedness in their hearts.",
-							{
-								"type": "entries",
-								"name": "Faces of Evil",
-								"entries": [
-									"Ancient beings with origins in the Feywild, hags are cankers on the mortal world. Their withered faces are framed by long, frayed hair, horrid moles and warts dot their blotchy skin, and their long, skinny fingers are tipped by claws that can slice open flesh with a touch. Their simple clothes are always tattered and filthy.",
-									"All hags possess magical powers, and some have an affinity for spellcasting. They can alter their forms or curse their foes, and their arrogance inspires them to view their magic as a challenge to the magic of the gods, whom they blaspheme at every opportunity.",
-									"Hags name themselves in darkly whimsical ways, claiming monikers such as Black Morwen, Peggy Pigknuckle, Grandmother Titchwillow, Nanna Shug, Rotten Ethel, or Auntie Wormtooth."
-								]
-							},
-							{
-								"type": "entries",
-								"name": "Monstrous Motherhood",
-								"entries": [
-									"Hags propagate by snatching and devouring human infants. After stealing a baby from its cradle or its mother's womb, the hag consumes the poor child. A week later, the hag gives birth to a daughter who looks human until her thirteenth birthday, whereupon the child transforms into the spitting image of her hag mother.",
-									"Hags sometimes raise the daughters they spawn, creating covens. A hag might also return the child to its grieving parents, only to watch from the shadows as the child grows up to become a horror."
-								]
-							},
-							{
-								"type": "entries",
-								"name": "Dark Bargains",
-								"entries": [
-									"Arrogant to a fault, hags believe themselves to be the most cunning of creatures, and they treat all others as inferior. Even so, a hag is open to dealing with mortals as long as those mortals show the proper respect and deference. Over their long lives, hags accumulate much knowledge of local lore, dark creatures, and magic, which they are pleased to sell.",
-									"Hags enjoy watching mortals bring about their own downfall, and a bargain with a hag is always dangerous. The terms of such bargains typically involve demands to compromise principles or give up something dear-especially if the thing lost diminishes or negates the knowledge gained through the bargain."
-								]
-							},
-							{
-								"type": "entries",
-								"name": "A Foul Nature",
-								"entries": [
-									"Hags love the macabre and festoon their garb with dead things and accentuate their appearance with bones, bits of flesh, and filth. They nurture blemishes and pick at wounds to produce weeping, suppurating flesh. Attractive creatures evoke disgust in a hag, which might \"help\" such creatures by disfiguring or transforming them.",
-									"This embrace of the disturbing and unpleasant extends to all aspects of a hag's life. A hag might fly in a magical giant's skull, landing it on a tree shaped to resemble an enormous headless body. Another might travel with a menagerie of monsters and slaves kept in cages, and disguised by illusions to lure unwary creatures close. Hags sharpen their teeth on millstones and spin cloth from the intestines of their victims, reacting with glee to the horror their actions invoke."
-								]
-							},
-							{
-								"type": "entries",
-								"name": "Dark Sorority",
-								"entries": [
-									"Hags maintain contact with each other and share knowledge. Through such contacts, it is likely that any given hag knows of every other hag in existence. Hags don't like each other, but they abide by an ageless code of conduct. Hags announce their presence before crossing into another hag's territory, bring gifts when entering another hag's dwelling, and break no oaths given to other hags-as long as the oath isn't given with the fingers crossed.",
-									"Some humanoids make the mistake of thinking that the hags' rules of conduct apply to all creatures. When confronted by such an individual, a hag might find it amusing to string the fool along for a while before teaching it a permanent lesson."
-								]
-							},
-							{
-								"type": "entries",
-								"name": "Dark Lairs",
-								"entries": [
-									"Hags dwell in dark and twisted woods, bleak moors, storm-lashed seacoasts, and gloomy swamps. In time, the landscape around a hag's lair reflects the creature's noxiousness, such that the land itself can attack and kill trespassers. Trees twisted by darkness attack passersby, while vines snake through the undergrowth to snare and drag off creatures one at a time. Foul stinking fogs turn the air to poison, and conceal pools of quicksand and sinkholes that consume unwary wanderers."
-								]
-							},
-							{
-								"type": "inset",
-								"name": "Hag Covens",
-								"entries": [
-									"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-									"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
-									{
-										"type": "entries",
-										"name": "Shared Spellcasting",
-										"entries": [
-											"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:",
-											{
-												"type": "list",
-												"style": "list-no-bullets",
-												"items": [
-													"1st level (4 slots): {@spell identify}, {@spell ray of sickness}",
-													"2nd level (3 slots): {@spell hold person}, {@spell locate object}",
-													"3rd level (3 slots): {@spell bestow curse}, {@spell counterspell}, {@spell lightning bolt}",
-													"4th level (3 slots): {@spell phantasmal killer}, {@spell polymorph}",
-													"5th level (2 slots): {@spell contact other plane}, {@spell scrying}",
-													"6th level (1 slot): {@spell eyebite}"
-												]
-											},
-											"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Hag Eye",
-										"entries": [
-											"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and {@sense darkvision} with a radius of 60 feet. If it is destroyed, each coven member takes {@damage 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-											"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"name": "Lair Actions",
-								"entries": [
-									"The following lair actions are options for grandmothers and powerful aunties. Grandmothers usually have three to five lair actions, aunties usually only one (if they have any at all). Unless otherwise noted, any lair action that requires a creature to make a saving throw uses the save DC of the hag's most powerful ability.",
-									"On initiative count 20 (losing initiative ties), the hag can take a lair action to cause one of the following effects, but can't use the same effect two rounds in a row:",
-									{
-										"type": "list",
-										"items": [
-											"Until initiative count 20 on the next round, the hag can pass through solid walls, doors, ceilings, and floors as if the surfaces weren't there.",
-											"The hag targets any number of doors and windows that she can see, causing each one to either open or close as she wishes. Closed doors can be magically locked (requiring a successful {@dc 20} Strength check to force open) until she chooses to make them unlocked, or until she uses this lair action again to open them."
-										]
-									},
-									"A powerful night hag might have the following additional lair actions:",
-									{
-										"type": "list",
-										"items": [
-											"One creature the hag can see within 120 feet of her must succeed on a DC 15 Charisma saving throw or be banished to a prison demiplane. To escape, the creature must use its action to make a Charisma check contested by the hag's. If the creature wins, it escapes the demiplane. Otherwise, the effect ends on initiative count 20 on the next round. When the effect ends, the creature reappears in the space it left or in the nearest unoccupied space if that one is occupied.",
-											"The hag targets up to three creatures that she can see within 60 feet of her. Each target must succeed on a DC 15 Constitution saving throw or be flung up to 30 feet through the air. A creature that strikes a solid object or is released in midair takes 1d6 bludgeoning damage for every 10 feet moved or fallen."
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"name": "Regional Effects",
-								"entries": [
-									"Each hag's lair is the source of three to five regional effects; the home of a grandmother, an auntie, or a coven has more effects than the lair of a single hag, including some that can directly harm intruders. Any regional effect that requires a creature to make a saving throw uses the save DC of the hag's most powerful ability. These effects either end immediately if the hag dies or abandons the lair, or take up to {@dice 2d10} days to fade away.",
-									"The region within 1 mile of a grandmother hag's lair is warped by the creature's fell magic, which creates one or more of the following effects:",
-									{
-										"type": "list",
-										"items": [
-											"Birds, rodents, snakes, spiders, or toads (or some other creatures appropriate to the hag) are found in great profusion.",
-											"Beasts that have an Intelligence score of 2 or lower are {@condition charmed} by the hag and directed to be aggressive toward intruders in the area.",
-											"Strange carved figurines, twig fetishes, or rag dolls magically appear in trees."
-										]
-									},
-									"A powerful night hag creates one or more of the following additional regional effects within 1 mile of her lair:",
-									{
-										"type": "list",
-										"items": [
-											"Shadows seem abnormally gaunt and sometimes move on their own as though alive.",
-											"Creatures are transported to a harmless but eerie demiplane filled with shadowy forms, waxy corpses, and cackling. The creatures are trapped there for a minute or two, and then returned to the place where they vanished from.",
-											"Intelligent creatures see hallucinations of dead friends, family members, and even themselves littering the hag's realm. Any attempt to interact with a hallucinatory image causes it to disappear."
-										]
-									}
-								]
-							}
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://i.pinimg.com/564x/cd/91/53/cd9153e361ae2a7a4ebb7f85eadb9225.jpg"
-						}
-					}
-				]
-			},
-			"tokenUrl": "http://waifu2x.udp.jp/api",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5etools-mirror-1.github.io/audio/bestiary/night-hag.mp3"
-			},
-			"traitTags": [
-				"Magic Resistance"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"actionTags": [
-				"Shapechanger"
-			],
-			"languageTags": [
-				"AB",
-				"C",
-				"I",
-				"P"
-			],
-			"damageTags": [
-				"S"
-			],
-			"spellcastingTags": [
-				"I"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"frightened",
-				"paralyzed",
-				"poisoned",
-				"unconscious"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
 		{
 			"name": "Deerclops",
 			"source": "AgentsofCaos",
@@ -1091,7 +635,7 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Campestri",
+			"name": "Campestri Singer",
 			"source": "AgentsofCaos",
 			"size": "T",
 			"type": "plant",
@@ -1474,8 +1018,8 @@
 				19
 			],
 			"hp": {
-				"formula": "17d10 + 119",
-				"average": 212
+				"formula": "24d12 + 168",
+				"average": 324
 			},
 			"speed": {
 				"walk": 20,
@@ -1488,10 +1032,20 @@
 			"wis": 14,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft.",
+				"blindsight 60 ft.",
 				"tremorsense 120 ft."
 			],
 			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
 			"conditionImmune": [
 				"grappled",
 				"prone"
@@ -1501,13 +1055,13 @@
 				{
 					"name": "Aberrant Ground",
 					"entries": [
-						"The ground in a 15-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 18} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+						"The ground in a 15-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 16} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
 					]
 				},
 				{
 					"name": "Gibbering",
 					"entries": [
-						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 30 feet of the horror and can hear the gibbering must succeed on a {@dc 19} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
+						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 30 feet of the aberration and can hear the gibbering must succeed on a {@dc 12} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d6} to determine what it does its turn. On a 1, the creature does nothing. On a 2 to 4, the creature takes no action or bonus action and walk towards the aberration. On a 5 or 6, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
 					]
 				},
 				{
@@ -1519,7 +1073,7 @@
 				{
 					"name": "Slimy",
 					"entries": [
-						"Attacking the aberration with a melee attack causes the weapon to get stuck on the aberration. On a melee attack, the creature must make a {@dc 17} Strength (athletics) or lose the weapon and the other attacks."
+						"Attacking the aberration with a melee attack causes the weapon to get stuck on the aberration. On a melee attack, the creature must make a {@dc 14} Strength (athletics) or lose the weapon and the other attacks."
 					]
 				}
 			],
@@ -1533,25 +1087,25 @@
 				{
 					"name": "Pseudopod Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 15 ft., one creature. {@h}15 ({@damage 3d8 + 2}) piercing damage. If the target is Large or smaller, it must succeed on a {@dc 13} Strength saving throw or be knocked {@condition prone} and {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the horror can't use the same pseudopod bite on another target. If the horror starts its turn grappling with a creature, it can use a bonus action to pull that creature within 5 feet of it."
+						"{@atk mw} {@hit 10} to hit, reach 15 ft., one creature. {@h}18 ({@damage 3d8 + 4}) piercing damage. If the target is Large or smaller, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone} and {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the aberration can't use the same pseudopod bite on another target. If the aberration starts its turn grappling with a creature, it can use a bonus action to pull that creature within 5 feet of it."
 					]
 				},
 				{
 					"name": "Engulf",
 					"entries": [
-						"The aberration moves up to its speed. While doing so, it can enter Medium or smaller creatures' spaces. Whenever the horror enters a creature's space, the creature must make a {@dc 19} Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the horror. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the horror enters the creature's space, and the creature takes 29 ({@damage 6d8 + 2}) piercing damage and is engulfed. While engulfed, the creature is {@condition blinded}, can't breathe, and {@condition restrained}, and takes 9 ({@damage 2d8}) piercing damage and 9 ({@damage 2d8}) acid damage at the start of each of the horror's turns. lf the target is killed by this damage, it is absorbed into the horror. When the horror moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a {@dc 13} Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the horror. The horror can have only up to two Medium or small creatures engulfed at a time."
+						"The aberration moves up to its speed. While doing so, it can enter Medium or smaller creatures' spaces. Whenever the aberration enters a creature's space, the creature must make a {@dc 16} Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the aberration. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the aberration enters the creature's space, and the creature takes 58 ({@damage 12d8 + 4}) piercing damage and is engulfed. While engulfed, the creature is {@condition blinded}, can't breathe, and {@condition restrained}, and takes 18 ({@damage 4d8}) piercing damage and 18 ({@damage 4d8}) acid damage at the start of each of the aberration's turns. lf the target is killed by this damage, it is absorbed into the aberration. When the aberration moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a {@dc 14} Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the horror. The aberration can have only up to two Medium or small creatures engulfed at a time."
 					]
 				},
 				{
 					"name": "Blinding Spittle {@recharge 5}",
 					"entries": [
-						"The aberration spits a blood ball at a point it can see within 20 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 16} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
+						"The aberration spits a blood ball at a point it can see within 25 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 16} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
 					]
 				},
 				{
 					"name": "Sorrowful Screech (Recharges on Dawn)",
 					"entries": [
-						"The aberration emits a terrible scream audible within 300 feet. Creatures within 30 feet of the aberration must succeed on a {@dc 19} Wisdom saving throw or be {@condition stunned} until the end of the aberration's next turn."
+						"The aberration emits a terrible scream audible within 300 feet. Creatures within 30 feet of the aberration must succeed on a {@dc 16} Wisdom saving throw or be {@condition stunned} until the end of the aberration's next turn."
 					]
 				}
 			],
@@ -1580,7 +1134,7 @@
 				"Amorphous"
 			],
 			"senseTags": [
-				"D",
+				"B",
 				"T"
 			],
 			"actionTags": [
@@ -1670,7 +1224,7 @@
 				{
 					"name": "Spore's Opera",
 					"entries": [
-						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must make a {@dc 10} saving throw according to the color of the campestri.",
+						"When a creature enter for the first time or start its turn in a 15-foot radius area of the campestri, it must make a {@dc 13} saving throw according to the color of the campestri.",
 						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
 						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
 						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
@@ -1680,7 +1234,7 @@
 					]
 				},
 				{
-					"name": "Swarm (Swarm of Rats)",
+					"name": "Swarm",
 					"entries": [
 						"The campestri opera can occupy another creature's space and vice versa, and the swarm can move through any opening large enough to accommodate an individual campestri. The swarm can't regain hit points or gain temporary hit points."
 					]
@@ -1692,11 +1246,13 @@
 					"entries": [
 						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h} 10 ({@damage 4d4}) bludgeoning damage, or 5 ({@damage 2d4}) bludgeoning damage if the swarm has half its hit points or fewer."
 					]
-				},
+				}
+			],
+			"reaction": [
 				{
-					"name": "Spores (1/Day)",
+					"name": "Spores {@recharge 5}",
 					"entries": [
-						"A 5-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"A 20-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				}
 			],
@@ -1742,6 +1298,653 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Large Earth Wisp",
+			"shortName": "Earth Wisp",
+			"source": "AgentsofCaos",
+			"size": "L",
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d10 + 80",
+				"average": 168
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 22,
+			"dex": 7,
+			"con": 21,
+			"int": 7,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Earth Glide",
+					"entries": [
+						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The earth wisp deals double damage to objects and structures."
+					]
+				},
+				{
+					"name": "Armor of Stones",
+					"entries": [
+						"This armor protects the earth wisp's core it can absorb up to 168 ({@dice 16d10 + 80}) points of damage.",
+						"The attack hits the core if the attack roll exceeds the elemental AC in:",
+						"Full HP: 5 or more",
+						"3/4 HP: 4 or more",
+						"1/2 HP: 3 or more",
+						"1/4 HP: 2 or more",
+						"The core receives damage without resistance."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The earth wisp makes two slam attacks."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}23 ({@damage 4d8 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Tremor",
+					"entries": [
+						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 15} Dexterity saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/dd/62/20/dd6220b3e8674bfba0ca86a156f87f47.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/4VI8cdH.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
+			},
+			"traitTags": [
+				"Siege Monster"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Medium Earth Wisp",
+			"shortName": "Earth Wisp",
+			"source": "AgentsofCaos",
+			"size": "M",
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "11d10 + 44",
+				"average": 104
+			},
+			"speed": {
+				"burrow": 30,
+				"fly": {
+					"number": 30,
+					"condition": "hover"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 4,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Earth Glide",
+					"entries": [
+						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The earth wisp deals double damage to objects and structures."
+					]
+				},
+				{
+					"name": "Armor of Stones",
+					"entries": [
+						"This armor protects the earth wisp's core it can absorb up to 104 ({@dice 11d10 + 44}) points of damage.",
+						"The attack hits the core if the attack roll exceeds the elemental AC in:",
+						"Full HP: 5 or more",
+						"3/4 HP: 4 or more",
+						"1/2 HP: 3 or more",
+						"1/4 HP: 2 or more",
+						"The core receives damage without resistance."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The earth wisp makes two slam attacks."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Tremor",
+					"entries": [
+						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 12} Dexterity saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/f5/ad/9c/f5ad9cfa2b55eed6b7928e4930cb2b96.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/vbVPxJk.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
+			},
+			"traitTags": [
+				"Siege Monster"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eyepod",
+			"group": "Beholders",
+			"source": "AgentsofCaos",
+			"page": 126,
+			"size": "T",
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d4 + 6"
+			},
+			"speed": {
+				"walk": 0,
+				"climb": 30
+			},
+			"str": 3,
+			"dex": 17,
+			"con": 14,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+5",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"prone"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the gazer can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The Eyepod can mimic simple sounds of speech it has heard, in any language. A creature that hears the sounds can tell they are imitations with a successful {@dc 10} Wisdom (Insight) check."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+					]
+				},
+				{
+					"name": "Eye Rays",
+					"entries": [
+						"The gazer shoots two of the following magical eye rays at random (reroll duplicates), choosing one or two targets it can see within 60 feet of it:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1. Dazing Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition charmed} until the start of the gazer's next turn. While the target is {@condition charmed} in this way, its speed is halved, and it has disadvantage on attack rolls."
+								},
+								{
+									"type": "item",
+									"name": "2. Fear Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition frightened} until the start of the gazer's next turn."
+								},
+								{
+									"type": "item",
+									"name": "3. Frost Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Dexterity saving throw or take 10 ({@damage 3d6}) cold damage."
+								},
+								{
+									"type": "item",
+									"name": "4. Telekinetic Ray.",
+									"style": "italic",
+									"entries": [
+										"If the target is a creature that is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or be moved up to 30 feet directly away from the gazer.",
+										"If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Gazer Familiar",
+					"entries": [
+						"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
+						{
+							"type": "entries",
+							"name": "Familiar",
+							"entries": [
+								"The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
+							]
+						}
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"A gazer is a tiny manifestation of a beholder's dreams. It resembles the beholder who dreamed it into existence, but its body is only 8 inches wide, and it has only four eyestalks. It follows its creator like a devoted, aggressive puppy, and sometimes small packs of these creatures patrol their master's lair for vermin to kill and lone creatures to harass.",
+											{
+												"name": "Nuisance Pet",
+												"entries": [
+													" A gazer can't speak any languages but can approximate mimicking words and sentences in a high-pitched, mocking manner. Beholders find gazers amusing and tolerate their presence like spoiled pets. A gazer can't be tamed by anyone but its creator, except through the use of magic or by bonding with a spellcaster (see sidebar). Some beholders with wizard minions insist they take a gazer as a familiar because they can see through the eyes of these creatures."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "Aggressive Vermin-Eater",
+												"entries": [
+													" A wild gazer (one living separately from a beholder) is territorial, eats bugs and small animals, and is known for playing with its food. A lone gazer avoids picking fights with creatures that are Medium or larger, but a pack of them might take on larger prey. A gazer might follow humanoids in its territory, noisily mimicking their speech and generally being a nuisance, until they leave the area, but it flees if confronted by something it can't kill."
+												],
+												"type": "entries"
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Variant: Gazer Familiar",
+										"entries": [
+											"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
+											{
+												"name": "Familiar",
+												"entries": [
+													" The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
+												],
+												"type": "entries"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://static.wikia.nocookie.net/dragonquest/images/c/cc/DQVDS_-_Eyepod.png"
+						}
+					}
+				]
+			},
+			"familiar": true,
+			"tokenUrl": "https://5e.tools/img/VGM/Gazer.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/gazer.mp3"
+			},
+			"traitTags": [
+				"Aggressive"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gibberling Spawn",
+			"shortName": "Spawn",
+			"source": "AgentsofCaos",
+			"size": "M",
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "10d8 + 50",
+				"average": 95
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 14,
+			"dex": 8,
+			"con": 20,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"senses": [
+				"blindsight 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
+			"conditionImmune": [
+				"grappled",
+				"prone"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Aberrant Ground",
+					"entries": [
+						"The ground in a 10-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+					]
+				},
+				{
+					"name": "Gibbering",
+					"entries": [
+						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 5 feet of the spawn and can hear the gibbering must succeed on a {@dc 10} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn."
+					]
+				},
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The spawn can move through a space as narrow as 1 inch wide without squeezing."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gibbering spawn makes two Bite attack, and if it can, uses its Blinding Spittle."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}16 ({@damage 4d6 + 2}) piercing damage. If the target is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or become {@condition grappled} (escape {@dc 12}). If the target is killed by this damage, it is absorbed into the spawn."
+					]
+				},
+				{
+					"name": "Blinding Spittle {@recharge 5}",
+					"entries": [
+						"The aberration spits a blood ball at a point it can see within 15 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 13} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
+					]
+				}
+			],
+			"environment": [
+				"swamp",
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ebe276a-ab04-41d4-b88b-be949746fe0f/da4xozp-f688dc9b-ca72-4b8b-a88d-8affbbe42c68.jpg/v1/fill/w_1024,h_1681,q_75,strp/slime_girl_by_sans_art_da4xozp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY4MSIsInBhdGgiOiJcL2ZcLzVlYmUyNzZhLWFiMDQtNDFkNC1iODhiLWJlOTQ5NzQ2ZmUwZlwvZGE0eG96cC1mNjg4ZGM5Yi1jYTcyLTRiOGItYTg4ZC04YWZmYmJlNDJjNjguanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.NzcZ87h-kZYAj7TR-tDrCXm2NmDMwHZ0y0w0SGgTS2k"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/pGI6wRo.png",
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"B",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled"
+			]
 		}
 	]
 }
