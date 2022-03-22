@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.145.1",
+	"siteVersion": "1.152.0",
 	"_meta": {
 		"sources": [
 			{
@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1639417688,
-		"dateLastModified": 1639417688
+		"dateAdded": 1647989633,
+		"dateLastModified": 1647989633
 	},
 	"monster": [
 		{
@@ -1944,6 +1944,271 @@
 			"conditionInflict": [
 				"blinded",
 				"grappled"
+			]
+		},
+		{
+			"name": "Crawling Horror",
+			"source": "AgentsofCaos",
+			"size": "L",
+			"type": "fiend",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 90
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 13,
+			"cha": 15,
+			"passive": 11,
+			"resist": [
+				"radiant"
+			],
+			"languages": [
+				"understands Abyssal, Common, and Infernal but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Confer Radiant Resistance",
+					"entries": [
+						"The crawling horror can grant resistance to radiant damage to anyone riding it."
+					]
+				},
+				{
+					"name": "Obscuration",
+					"entries": [
+						"The crawling horror have a 20-foot radius darkness aura."
+					]
+				},
+				{
+					"name": "Shadow Eyes",
+					"entries": [
+						"The crawling horror can see through magical darkness as if it was normal darkness."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shadow Crunch",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) psychic damage plus 7 ({@damage 2d6}) necrotic damage."
+					]
+				},
+				{
+					"name": "Ethereal Stride",
+					"entries": [
+						"The crawling horror and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117861792645120/shadow_big.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/hdYs28e.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5etools-mirror-1.github.io/audio/bestiary/nightmare.mp3"
+			},
+			"languageTags": [
+				"AB",
+				"C",
+				"CS",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Baelvan",
+			"source": "AgentsofCaos",
+			"page": 336,
+			"size": "L",
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"from": [
+						"natural armor"
+					],
+					"ac": 14
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 3,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Arcane Sense",
+					"entries": [
+						"The spellhound can pinpoint, by scent, the location of spellcasters within 60 feet of it."
+					]
+				},
+				{
+					"name": "Channel Breaker",
+					"entries": [
+						"The spellhound has advantage on attack rolls against a creature, if the creature is concentrating on a spell."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell.",
+					"entries": [
+						"The spellhound has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The spellhound has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The spellhound makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, and  If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Nullifying Howl (1/Day)",
+					"entries": [
+						"The spellhound lets out a high-pitched, multiphonic howl to disrupt magical effects within 60 feet of it. Any spell of 3rd level or lower within the area ends. For each spell of 4th-level or higher in the area, the spellhound makes an ability check, adding its Constitution modifier to the roll. The DC equals 10 + the spell's level. On a success, the spell ends.",
+						"In addition, each spellcaster within 30 feet of the spellhound that can hear the howl must succeed on a {@dc 14} Constitution saving throw or be {@condition stunned} until the end of its next turn."
+					]
+				}
+			],
+			"environment": [
+				"farmland",
+				"forest",
+				"hill"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"A shimmering coat and a ridged snout distinguish the hound from other monstrous canines."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Vindictive Origins",
+										"entries": [
+											"The first spellhounds began as nothing more than ordinary scent hounds. When the master of the hounds was tormented by a hag, he struck a deal with a powerful fey lord, requesting that his stock be blessed with the ability to hunt the witch. The hounds were returned to him, empowered and mutated, but capable of making short work of the hag nonetheless. After the houndmaster was ostracized for keeping monstrous pets, he grew resentful and concluded that the fey lord had wronged him. He arrogantly set out with his spellhounds after the fey lord that had created them, but he never returned. Ever since, spellhounds have been kept as prized pets by warring fey or set loose in fey-inhabited forests to prey on lonely spellcasters."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Magical Predators",
+										"entries": [
+											"Spellhounds have olfactory capabilities that allow them to sense the \"odor\" of spellcasters. This, combined with their spell-repelling coats and their magic-disrupting howls, makes them a menace for anyone with even a minor arcane faculty."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/908421018270466138/955956991984033792/964feda4a2cec8f13371959f6d116eb9.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/Avjbgqq.png",
+			"traitTags": [
+				"Keen Senses",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
 			]
 		}
 	]
