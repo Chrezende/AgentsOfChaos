@@ -1,0 +1,78 @@
+{
+	"siteVersion": "1.152.1",
+	"_meta": {
+		"sources": [
+			{
+				"json": "AgentsofCaos",
+				"abbreviation": "AoC",
+				"full": "Agents of Chaos",
+				"url": "",
+				"authors": [
+					"Chrezende"
+				],
+				"convertedBy": [
+					"Chrezende"
+				]
+			}
+		],
+		"dateAdded": 1648592076,
+		"dateLastModified": 1648592076
+	},
+	"spell": [
+		{
+			"name": "Emotion's Helix",
+			"source": "AgentsofCaos",
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Hendriel cria uma azagaia utilizando sua aura e arremessa contra uma criatura alvo em seu alcance. Faça um ataque mágico à distância contra o alvo. Em um acerto, o alvo recebe {@dice 4d6} de dano radiante, e Hendriel pode escolher uma aliado que possa ver a ate 10 feet (3 m) do alvo. O aliado escolhido recupera {@dice 2d6} pontos de vida."
+			],
+			"entriesHigherLevel": [
+				{
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando esta magia é conjurada utilizando um espaço de 2º nível ou maior, o dano aumenta em {@dice 1d6} para cada nível acima do primeiro e a cura aumenta em {@dice 1d6} para cada dois níveis acima do primeiro."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"HL"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			],
+			"classes": {
+				"fromClassList": []
+			}
+		}
+	]
+}
