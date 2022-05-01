@@ -1,0 +1,241 @@
+{
+	"siteVersion": "1.154.0",
+	"_meta": {
+		"sources": [
+			{
+				"json": "GuildaDaAbobora",
+				"abbreviation": "GdA",
+				"full": "Guilda Da Abobora",
+				"url": "",
+				"authors": [
+					"Pumpkin Studio",
+					"Midas",
+					"Davy Jones"
+				],
+				"convertedBy": [
+					"CHRezende",
+					"Ellementho"
+				]
+			}
+		],
+		"dateAdded": 1651426170,
+		"dateLastModified": 1651426170
+	},
+	"monster": [
+		{
+			"name": "Udolaq Cleric",
+			"shortName": "cleric",
+			"source": "GuildaDaAbobora",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "elemental",
+				"tags": [
+					"udolaq"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"from": [
+						"natural armor"
+					],
+					"ac": 14
+				}
+			],
+			"hp": {
+				"formula": "12d10 + 36",
+				"average": 102
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 16,
+			"int": 15,
+			"wis": 15,
+			"cha": 8,
+			"save": {
+				"wis": "+8",
+				"cha": "+5"
+			},
+			"skill": {
+				"perception": "+8",
+				"survival": "+8",
+				"arcana": "+8"
+			},
+			"passive": 18,
+			"resist": [
+				{
+					"resist": [
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Infernal"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The cleric is a 18th level spellcaster with Mage multiclass, therefore it can use spells of either class. Your spellcasting ability is Wisdom (spell resist {@dc 20} and spell attack modifier +12)."
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell guiding bolt}",
+								"{@spell protection from evil and good}",
+								"{@spell shield of faith}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell magic weapon}",
+								"{@spell spiritual weapon}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell clairvoyance}",
+								"{@spell crusader's mantle}",
+								"{@spell fear}",
+								"{@spell spirit guardians}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell confusion}",
+								"{@spell freedom of movement}",
+								"{@spell greater invisibility}",
+								"{@spell stoneskin}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell dream}",
+								"{@spell flame strike}",
+								"{@spell geas}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell heal}",
+								"{@spell planar ally}",
+								"{@spell true seeing}"
+							],
+							"slots": 1
+						},
+						"7": {
+							"spells": [
+								"{@spell conjure celestial}",
+								"{@spell regenerate}"
+							],
+							"slots": 1
+						},
+						"8": {
+							"spells": [
+								"{@spell earthquake}"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell meteor swarm}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Divine Strike",
+					"entries": [
+						"Once for turn, when the cleric hits a creature with a weapon attack, the cleric deals additional {@damage 2d8} radiant damage."
+					]
+				},
+				{
+					"name": "War Priest",
+					"entries": [
+						"When the cleric use the Attack action, it can make one weapon attack as a bonus action."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The cleric can make 3 attacks each turn."
+					]
+				},
+				{
+					"name": "Nightmare's Flail",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}19 ({@damage 3d8 + 6}) bludgeoning damage."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/970069777731186738/970069945151008918/Udulaq.jpg?width=479&height=663"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/970069777731186738/970069999676948552/Tokens_Clerigo_Udolaq.png?width=663&height=663",
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW"
+			]
+		}
+	]
+}
