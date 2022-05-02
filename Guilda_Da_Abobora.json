@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.154.0",
+	"siteVersion": "1.154.1",
 	"_meta": {
 		"sources": [
 			{
@@ -18,8 +18,8 @@
 				]
 			}
 		],
-		"dateAdded": 1651426170,
-		"dateLastModified": 1651426170
+		"dateAdded": 1651461566,
+		"dateLastModified": 1651461566
 	},
 	"monster": [
 		{
@@ -235,6 +235,277 @@
 			],
 			"miscTags": [
 				"MW"
+			]
+		},
+		{
+			"name": "Nightmare Zombie",
+			"shortName": "zombie",
+			"source": "GuildaDaAbobora",
+			"basicRules": true,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 6,
+			"con": 16,
+			"int": 3,
+			"wis": 6,
+			"cha": 5,
+			"save": {
+				"wis": "+0"
+			},
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"understands all languages it spoke in life but can't speak"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead."
+					]
+				},
+				{
+					"name": "Tackle",
+					"entries": [
+						"The zombie runs toward your opponent to make a "
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"If the zombie moves at least 20 feet straight toward a creature and then hits it with a bite attack on the same turn, that target must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The zombie can make up to 2 attacks each turn."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}8 ({@damage 2d6 + 1}) slashing damage, plus 4 ({@damage 1d8}) psychic damage."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/970069777731186738/970495717087019048/Zumbi-do-Pesadelo.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://cdn.discordapp.com/attachments/970069777731186738/970495758455406643/Tokens_Zumbi_do_Pesadelo.png",
+			"traitTags": [
+				"Pounce",
+				"Undead Fortitude"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kumizurg's Shredder",
+			"shortName": "Shredder",
+			"source": "GuildaDaAbobora",
+			"size": [
+				"H"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				{
+					"immune": [
+						"necrotic",
+						"poison",
+						"psychic"
+					]
+				},
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"The Shredder's weapon attacks are magical."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The Shredder deals double damage to objects and structures."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If the Shredder fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Shredder makes three attacks. He also uses Frightful Presence."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Each creature of Shredder's choice within 120 feet of him and aware of him must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A {@condition frightened} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. These later saves have disadvantage if Baphomet is within line of sight of the creature.",
+						"If a creature succeeds on any of these saves or the effect ends on it, the creature is immune to Shredder's Frightful Presence for the next 24 hours."
+					]
+				},
+				{
+					"name": "Stomp",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d6}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Swords",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d6}) slashing damage."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Suffering",
+					"entries": [
+						"This action can be used only once per turn. The Shredder split the last round damage taken with an enemy, recovering half the damage and inflicting half of it to that chosen enemy."
+					]
+				},
+				{
+					"name": "Attack",
+					"entries": [
+						"The Shredder makes an attack."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Kimizurg's Shredder",
+				"source": "GuildaDaAbobora"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Weapons",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Frightful Presence",
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"damageTagsLegendary": [
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
 			]
 		}
 	]
