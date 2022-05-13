@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.152.0",
+	"siteVersion": "1.154.2",
 	"_meta": {
 		"sources": [
 			{
@@ -15,14 +15,16 @@
 				]
 			}
 		],
-		"dateAdded": 1647989633,
-		"dateLastModified": 1647989633
+		"dateAdded": 1652419689,
+		"dateLastModified": 1652419689
 	},
 	"monster": [
 		{
 			"name": "Deerclops",
 			"source": "AgentsofCaos",
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -182,7 +184,9 @@
 		{
 			"name": "Terrorbeak",
 			"source": "AgentsofCaos",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -332,7 +336,9 @@
 		{
 			"name": "Crawling Horror",
 			"source": "AgentsofCaos",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -438,7 +444,9 @@
 		{
 			"name": "Bomb",
 			"source": "AgentsofCaos",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -637,7 +645,9 @@
 		{
 			"name": "Campestri Singer",
 			"source": "AgentsofCaos",
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -754,7 +764,9 @@
 		{
 			"name": "Dragon Golem",
 			"source": "AgentsofCaos",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1008,7 +1020,9 @@
 			"name": "Gibberling Aberration",
 			"shortName": "Aberration",
 			"source": "AgentsofCaos",
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -1160,7 +1174,9 @@
 		{
 			"name": "Campestri Opera",
 			"source": "AgentsofCaos",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "plant",
 				"swarmSize": "T"
@@ -1303,7 +1319,9 @@
 			"name": "Large Earth Wisp",
 			"shortName": "Earth Wisp",
 			"source": "AgentsofCaos",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -1462,7 +1480,9 @@
 			"name": "Medium Earth Wisp",
 			"shortName": "Earth Wisp",
 			"source": "AgentsofCaos",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -1618,7 +1638,9 @@
 			"group": "Beholders",
 			"source": "AgentsofCaos",
 			"page": 126,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -1824,7 +1846,9 @@
 			"name": "Gibberling Spawn",
 			"shortName": "Spawn",
 			"source": "AgentsofCaos",
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -1949,7 +1973,9 @@
 		{
 			"name": "Crawling Horror",
 			"source": "AgentsofCaos",
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"alignment": [
 				"N",
@@ -2053,71 +2079,268 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Baelvan",
+			"name": "Ás de Copas Negro",
 			"source": "AgentsofCaos",
-			"page": 336,
-			"size": "L",
-			"type": "monstrosity",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
 			"alignment": [
-				"L",
 				"N"
 			],
 			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "17",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/71/80/61/718061466a59f7a78d761284596d88ab.jpg"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Armored Shade",
+			"source": "AgentsofCaos",
+			"page": 0,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Shade"
+				]
+			},
+			"alignment": [
+				"L",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
 				{
+					"ac": 20,
 					"from": [
 						"natural armor"
-					],
-					"ac": 14
+					]
 				}
 			],
 			"hp": {
-				"average": 102,
-				"formula": "12d10 + 36"
+				"formula": "11d10 + 44",
+				"average": 104
 			},
 			"speed": {
-				"walk": 40
+				"walk": 30
 			},
 			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 3,
-			"wis": 13,
-			"cha": 8,
+			"dex": 10,
+			"con": 18,
+			"int": 12,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"str": "+7",
+				"con": "+7"
+			},
 			"skill": {
-				"perception": "+3",
-				"stealth": "+4"
+				"athletics": "+7"
+			},
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						{
+							"special": "all damage"
+						}
+					],
+					"note": "while it has Warding Shield charges"
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"piercing",
+						"slashing"
+					],
+					"note": "while it has Warding Shield charges"
+				}
+			],
+			"languages": [
+				"understands all languages it spoke in life but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Warding Partner",
+					"entries": [
+						"The armored shade can choose up to the charges of Warding Shield allies within 60 feet of it to ward. Those creatures gains a +1 bonus to their AC and saving throws, and they have resistance to all damage. Those allies can have only one warding guardian at the time. When one of the warding partners dies, one charge of Warding Shield is lost."
+					]
+				},
+				{
+					"name": "Warding Shield (3 Charges)",
+					"entries": [
+						"While the armored shade has charges of Warding Shield, it has immunity to all piercing and slashing damage and resistance to all other damages."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Threatening",
+					"entries": [
+						"Creatures provoke an {@action opportunity attack} from the armored shade when they move 5 feet or more while within the armored shade's reach, and if the armored shade hits a creature with an opportunity attack, the target's speed is reduced to 0 until the end of the current turn."
+					]
+				},
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The armored shade makes three longword attacks."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) slashing damage, or 9 ({@damage 1d10 + 4}) slashing damage if used with both hands, plus 7 ({@damage 2d6}) necrotic damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The armored shade adds 3 to its AC against one melee attack that would hit it. To do so, the armored shade must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/908421018270466138/974431418841198642/unknown.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974439047701332028/unknown.png",
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Boar Shade",
+			"isNpc": true,
+			"source": "AgentsofCaos",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"Shade"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 96",
+				"average": 200
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 23,
+			"int": 6,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"str": "+12",
+				"con": "+12",
+				"dex": "+10"
+			},
+			"skill": {
+				"athletics": "+18",
+				"intimidation": "+8",
+				"survival": "+6"
 			},
 			"senses": [
 				"darkvision 60 ft."
 			],
-			"passive": 13,
-			"conditionImmune": [
-				"charmed"
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
 			],
-			"cr": "4",
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "17",
 			"trait": [
 				{
-					"name": "Arcane Sense",
+					"name": "Relentless (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The spellhound can pinpoint, by scent, the location of spellcasters within 60 feet of it."
+						"If boar shade takes 50 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
 					]
 				},
 				{
-					"name": "Channel Breaker",
+					"name": "Charge",
 					"entries": [
-						"The spellhound has advantage on attack rolls against a creature, if the creature is concentrating on a spell."
-					]
-				},
-				{
-					"name": "Keen Hearing and Smell.",
-					"entries": [
-						"The spellhound has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The spellhound has advantage on saving throws against spells and other magical effects."
+						"If the boar shade moves at least 15 feet straight toward a target and then hits it with its shade tusks on the same turn, the target takes an extra 24 ({@dice 4d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 17} Strength saving throw or be knocked {@condition prone}."
 					]
 				}
 			],
@@ -2125,75 +2348,42 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The spellhound makes two bite attacks."
+						"Boar shade makes two melee attacks: one with its tusks and one with its hooves."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "Shade Tusks",
 					"entries": [
-						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) piercing damage, and  If the target is a creature, it must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}."
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}20 ({@damage 4d6 + 6}) slashing damage plus 17 ({@damage 5d6}) necrotic damage."
 					]
 				},
 				{
-					"name": "Nullifying Howl (1/Day)",
+					"name": "Shade Hooves",
 					"entries": [
-						"The spellhound lets out a high-pitched, multiphonic howl to disrupt magical effects within 60 feet of it. Any spell of 3rd level or lower within the area ends. For each spell of 4th-level or higher in the area, the spellhound makes an ability check, adding its Constitution modifier to the roll. The DC equals 10 + the spell's level. On a success, the spell ends.",
-						"In addition, each spellcaster within 30 feet of the spellhound that can hear the howl must succeed on a {@dc 14} Constitution saving throw or be {@condition stunned} until the end of its next turn."
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}20 ({@damage 4d6 + 6}) bludgeoning damage plus 17 ({@damage 5d6}) necrotic damage."
+					]
+				},
+				{
+					"name": "Shade Slam {@recharge 5}",
+					"entries": [
+						"Boar shade jumps to a place within range and falls violently. All creatures below and up to 10 ft. of the boar's landing must make a {@dc 17} Dexterity saving throw, taking 27 ({@damage 6d8}) bludgeoning damage plus 17 ({@damage 5d6}) necrotic damage on a failed save and being knocked {@condition prone}, or half as much damage on a successful one."
 					]
 				}
 			],
-			"environment": [
-				"farmland",
-				"forest",
-				"hill"
-			],
 			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									{
-										"type": "quote",
-										"entries": [
-											"A shimmering coat and a ridged snout distinguish the hound from other monstrous canines."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Vindictive Origins",
-										"entries": [
-											"The first spellhounds began as nothing more than ordinary scent hounds. When the master of the hounds was tormented by a hag, he struck a deal with a powerful fey lord, requesting that his stock be blessed with the ability to hunt the witch. The hounds were returned to him, empowered and mutated, but capable of making short work of the hag nonetheless. After the houndmaster was ostracized for keeping monstrous pets, he grew resentful and concluded that the fey lord had wronged him. He arrogantly set out with his spellhounds after the fey lord that had created them, but he never returned. Ever since, spellhounds have been kept as prized pets by warring fey or set loose in fey-inhabited forests to prey on lonely spellcasters."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Magical Predators",
-										"entries": [
-											"Spellhounds have olfactory capabilities that allow them to sense the \"odor\" of spellcasters. This, combined with their spell-repelling coats and their magic-disrupting howls, makes them a menace for anyone with even a minor arcane faculty."
-										]
-									}
-								]
-							}
-						]
-					}
-				],
 				"images": [
 					{
 						"type": "image",
 						"href": {
 							"type": "external",
-							"url": "https://cdn.discordapp.com/attachments/908421018270466138/955956991984033792/964feda4a2cec8f13371959f6d116eb9.png"
+							"url": "https://media.discordapp.net/attachments/908421018270466138/973771679899742220/shade_boar1.png"
 						}
 					}
 				]
 			},
-			"tokenUrl": "https://i.imgur.com/Avjbgqq.png",
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974483623740846080/unknown.png",
 			"traitTags": [
-				"Keen Senses",
-				"Magic Resistance"
+				"Charge"
 			],
 			"senseTags": [
 				"D"
@@ -2202,14 +2392,342 @@
 				"Multiattack"
 			],
 			"damageTags": [
-				"P"
+				"B",
+				"N",
+				"S"
 			],
 			"miscTags": [
-				"MW"
+				"MW",
+				"RCH"
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boar Shade",
+			"isNpc": true,
+			"source": "AgentsofCaos",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"Shade"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 96",
+				"average": 200
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 23,
+			"int": 6,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"str": "+12",
+				"con": "+12",
+				"dex": "+10"
+			},
+			"skill": {
+				"athletics": "+18",
+				"intimidation": "+8",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Relentless (Recharges after a Short or Long Rest)",
+					"entries": [
+						"If boar shade takes 50 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"If the boar shade moves at least 15 feet straight toward a target and then hits it with its shade tusks on the same turn, the target takes an extra 24 ({@dice 7d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Juggernaut (Armored)",
+					"entries": [
+						"The armored boar shade movement cannot be stopped and ignores difficult terrain. The armored boar shade is immune to become {@condition grappled}, {@condition restrained} and {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Boar shade makes two melee attacks: one with its tusks and one with its hooves."
+					]
+				},
+				{
+					"name": "Armored Tusks",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}30 ({@damage 7d6 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Armored Hooves",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}30 ({@damage 7d6 + 6}) bludgeoning damage plus 17 ({@damage 5d6}) necrotic damage."
+					]
+				},
+				{
+					"name": "Armored Slam {@recharge}",
+					"entries": [
+						"Boar shade jumps to a place within range and falls violently. All creatures below and up to 10 ft. of the boar's landing must make a {@dc 19} Dexterity saving throw, taking 27 ({@damage 8d8}) bludgeoning damage plus 17 ({@damage 5d6}) necrotic damage on a failed save and being knocked {@condition prone}, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Shade Tusks",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}30 ({@damage 7d6 + 6}) slashing damage plus 17 ({@damage 5d6}) necrotic damage."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/908421018270466138/973771680864411700/shade_boar2.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974483623740846080/unknown.png",
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Armored Boar Shade",
+			"isNpc": true,
+			"source": "AgentsofCaos",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"Shade"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 96",
+				"average": 200
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 23,
+			"int": 6,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"str": "+12",
+				"con": "+12",
+				"dex": "+10"
+			},
+			"skill": {
+				"athletics": "+18",
+				"intimidation": "+8",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Relentless (Recharges after a Short or Long Rest)",
+					"entries": [
+						"If boar shade takes 50 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"If the boar shade moves at least 15 feet straight toward a target and then hits it with its shade tusks on the same turn, the target takes an extra 21 ({@dice 6d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Juggernaut (Only Armored)",
+					"entries": [
+						"The armored boar shade movement cannot be stopped and ignores difficult terrain. The armored boar shade is immune to become {@condition grappled}, {@condition restrained} and {@condition prone}."
+					]
+				},
+				{
+					"name": "Rune Armor",
+					"entries": [
+						"The damage goes to the armor (150 hp), and it is resistant to all damage. When the Rune Armor is destroyed, the damage goes normally to the boar shade. The armor regenerates in (6 - active runes) turns."
+					]
+				},
+				{
+					"name": "Shade Essence",
+					"entries": [
+						"When the armor is "
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Boar shade makes two melee attacks: one with its tusks and one with its hooves."
+					]
+				},
+				{
+					"name": "Armored Tusks",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Armored Hooves",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Armored Slam {@recharge}",
+					"entries": [
+						"Boar shade jumps to a place within range and falls violently. All creatures below and up to 10 ft. of the boar's landing must make a {@dc 19} Dexterity saving throw, taking 27 ({@damage 8d8}) bludgeoning damage on a failed save and being knocked {@condition prone}, or half as much damage on a successful one."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/908421018270466138/973771680864411700/shade_boar2.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974531071733555210/unknown.png",
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }
