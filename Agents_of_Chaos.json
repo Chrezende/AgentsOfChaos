@@ -15,8 +15,8 @@
 				]
 			}
 		],
-		"dateAdded": 1652419689,
-		"dateLastModified": 1652419689
+		"dateAdded": 1652420655,
+		"dateLastModified": 1652420655
 	},
 	"monster": [
 		{
@@ -2728,6 +2728,121 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Shade",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Shade"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d8 + 14",
+				"average": 77
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 12,
+			"int": 16,
+			"wis": 12,
+			"cha": 14,
+			"save": {
+				"dex": "+6",
+				"int": "+6"
+			},
+			"skill": {
+				"deception": "+5",
+				"stealth": "+6",
+				"acrobatics": "+9"
+			},
+			"passive": 16,
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"The shade can take the {@action Dash}, {@action Disengage}, or {@action Hide} action as a bonus action on each of its turns."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"The shade deals an extra 14 ({@dice 4d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the shade that isn't {@condition incapacitated} and the shade doesn't have disadvantage on the attack roll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The shade makes two melee attack."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) slashing damage, plus 14 ({@damage 4d6}) necrotic damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shade Rebuke (Recharges after a Short or Long Rest)",
+					"entries": [
+						"In response to taking damage, the shade summons a necrotic mist that surrounds the creature that damaged you. The creature must make a {@dc 15} Dexterity saving throw. It takes {@damage 2d10} necrotic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/908421018270466138/974495500449488956/unknown.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974497225600286760/unknown.png",
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N",
+				"O",
+				"R"
+			],
+			"miscTags": [
+				"MW"
+			]
 		}
 	]
 }
