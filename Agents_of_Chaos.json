@@ -1,5 +1,5 @@
 {
-	"siteVersion": "1.154.2",
+	"siteVersion": "1.181.1",
 	"_meta": {
 		"sources": [
 			{
@@ -15,105 +15,159 @@
 				]
 			}
 		],
-		"dateAdded": 1652420655,
-		"dateLastModified": 1652420655
+		"dateAdded": 1685067045,
+		"dateLastModified": 1685067045
 	},
 	"monster": [
 		{
-			"name": "Deerclops",
+			"name": "Arcane Feather",
 			"source": "AgentsofCaos",
+			"page": 0,
 			"size": [
-				"H"
+				"M"
 			],
 			"type": {
-				"type": "fiend",
+				"type": "humanoid",
 				"tags": [
-					"demon"
+					"Kenku"
 				]
 			},
 			"alignment": [
 				"C",
-				"E"
+				"N"
 			],
 			"ac": [
 				{
 					"ac": 19,
 					"from": [
-						"natural armor"
+						"{@item +2 studded leather armor}"
 					]
 				}
 			],
 			"hp": {
-				"formula": "20d12 + 80",
-				"average": 210
+				"formula": "52d8 + 104",
+				"average": 338
 			},
 			"speed": {
-				"walk": 30
+				"walk": 30,
+				"climb": 30
 			},
-			"str": 24,
-			"dex": 16,
-			"con": 18,
-			"int": 8,
+			"str": 19,
+			"dex": 10,
+			"con": 14,
+			"int": 20,
 			"wis": 14,
-			"cha": 18,
+			"cha": 12,
 			"save": {
-				"str": "+12",
-				"con": "+9"
+				"str": "+9",
+				"con": "+7",
+				"wis": "+7"
 			},
 			"skill": {
-				"athletics": "+12",
-				"intimidation": "+9"
+				"investigation": "+10",
+				"history": "+10",
+				"deception": "+6",
+				"arcana": "+10",
+				"nature": "+10",
+				"persuasion": "+6",
+				"religion": "+10",
+				"athletics": "+9"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"darkvision 60 ft."
 			],
 			"passive": 12,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical weapons that aren't silvered"
-				}
-			],
-			"immune": [
-				"cold",
-				"poison"
-			],
-			"conditionImmune": [
-				"frightened",
-				"poisoned"
-			],
 			"languages": [
-				"Abyssal",
-				"telepathy 120 ft."
+				"Common",
+				"Auran",
+				"Elvish",
+				"Infernal"
 			],
-			"cr": "16",
+			"cr": "18",
 			"trait": [
 				{
-					"name": "Magic Resistance",
+					"name": "Arcane Shot",
 					"entries": [
-						"The deerclops has advantage on saving throws against spells and other magical effects."
+						"Once per turn, when the arcane archer hits a target with a ranged weapon attack, it can choose one of the following six effects:"
 					]
 				},
 				{
-					"name": "Lethargy Aura",
+					"name": "Curving Shot",
 					"entries": [
-						"Any creature hostile to the deerclops that enters or starts its turn within 20 feet of the deerclops must make a {@dc 18} Wisdom saving throw, unless the deerclops is {@condition incapacitated}. On a failed save, the creature have its movement speed halved until the start of its next turn."
+						"When the arcane feather makes a ranged attack roll and misses, it can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target."
 					]
 				},
 				{
-					"name": "Nimble footed",
+					"name": "Magic Feathers",
 					"entries": [
-						"The deerclops ignores the extra movement cost of difficult terrains and have advantage to Strength (Athletics) saving throws to resist being {@condition restrained}."
+						"The arcane feather's ranged weapon attacks are magical and deal an extra {@damage 1d6} of the damage type of the last arcane volley used."
 					]
 				},
 				{
-					"name": "Abyssal Eye",
+					"name": "Analyse",
 					"entries": [
-						"The deerclops can see through magical darkness as if it was normal darkness."
+						"The arcane feather stops and analyses the surroundings. If the arcane feather succeed on a {@dc 15} Intelligence (Investigation) check, you give yourself advantage on your next attack roll on the current turn.",
+						"You can use this trait only if you haven't moved during this turn, and after you use this trait, your speed is 0 until the end of the current turn."
+					]
+				},
+				{
+					"name": ".Exploding Feather",
+					"entries": [
+						"The target and all other creatures within 10 feet of it take an extra 14 ({@damage 4d6}) fire damage each."
+					]
+				},
+				{
+					"name": ".Banishing Feather",
+					"entries": [
+						"The target takes an extra 7 ({@damage 2d6}) force damage. If the target is a creature, it must succeed on a {@dc 19} Charisma saving throw, or be banished. While banished in this way, its speed is reduced to 0 and the creature is {@condition incapacitated}. The creature reappears in the end of its next turn on the original space, or the nearest unoccupied space it the original was occupied."
+					]
+				},
+				{
+					"name": ".Constrict Feather",
+					"entries": [
+						"The target takes an extra 14 ({@damage 4d6}) poison damage and if the target is a creature, its move speed is reduced by 10 fts. At the start of each of its turn, the creature takes 14 ({@damage 4d6}) slashing damage. The target or any creature that can reach it can use an action to make a {@dc 19} Strength (Athletics) check to remove the thorns, otherwise, these thorns least for 1 minute or if this option is used again."
+					]
+				},
+				{
+					"name": ".Shadow Feather",
+					"entries": [
+						"The target takes an extra 14 ({@damage 4d6}) psychic damage and the creature must succeed on a {@dc 19} Wisdom saving throw or be unable to see anything farther than 5 feet away until the start of the arcane archer's next turn."
+					]
+				},
+				{
+					"name": ".Enfeebling Feather",
+					"entries": [
+						"The target takes an extra 14 ({@damage 4d6}) necrotic damage and loses the ability to recover hit points. The target must succeed on a {@dc 19} Constitution saving throw, or the damage caused by their weapon attacks are halved. These effects lasts until the beginning of the arcane feather's next turn."
+					]
+				},
+				{
+					"name": ".Disabling Feather",
+					"entries": [
+						"The target takes an extra 14 ({@damage 4d6})  psychic damage and must succeed on a {@dc 19} Wisdom saving throw, or become {@condition charmed} by the arcane feather until the start of its next turn. The {@condition charmed} creature is also {@condition incapacitated} and has its move speed reduced to 0. This effect ends if the affected creature takes any damage."
+					]
+				},
+				{
+					"name": "Absorb Energy",
+					"entries": [
+						"When the arcane feather hits a creature with a ranged attack and reduce its hit points to 0, the arcane archer can make one additional Arcane Shot."
+					]
+				},
+				{
+					"name": "Strong Throw",
+					"entries": [
+						"Attacking at long range doesn't impose disadvantage on the arcane feather's ranged weapon attack roll."
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The arcane feather can use its action to change its appearance and voice to appear as another Small or Medium humanoid, or back into its true form. Other than its armor, any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+					]
+				},
+				{
+					"name": "Feather rain",
+					"entries": [
+						"Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls."
 					]
 				}
 			],
@@ -121,26 +175,67 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The deerclops makes four attacks with it's claws."
+						"The arcane feather makes four black feather attacks or one arcane volley."
 					]
 				},
 				{
-					"name": "Claws",
+					"name": "Black Feathers",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}22 ({@damage 3d8 + 7}) damage."
+						"{@atk rw} {@hit 14} to hit, reach 25/100 ft., one target. {@h}11 ({@damage 2d8 + 8}) piercing damage."
 					]
 				},
 				{
-					"name": "Slam",
+					"name": "Arcane Volley: Acid {@recharge 5}",
 					"entries": [
-						"The deerclops slams a creature {@condition grappled} by it on the floor, dealing 14 {@damage 2d6 + 7} bludgeoning damage plus 59 {@damage 8d12 + 7} piercing damage if slammed on the Ice Spikes, and is knocked {@condition prone}."
+						"The arcane feather throw a feather into the air, choose a point within range and hundreds acid feathers fall in a in a 40-foot-radius, 20-foot-high cylinder volley from above and then disappear.",
+						"Each creature in that area must make a {@dc 19} Dexterity saving throw. On a failed save, a creature takes 30 ({@damage 12d4}) acid damage and another 12 ({@damage 5d4}) acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn."
 					]
 				},
 				{
-					"name": "Ice Stomp {@recharge 5}",
+					"name": "Arcane Volley: Cold {@recharge 5}",
 					"entries": [
-						"The deerclops stomps on the floor, creating 5ft. tall ice spikes in a 20 ft. radius area centered on itself. Each creature in that area must make a {@dc 18} Dexterity saving throw, taking 36 ({@damage 8d12 + 7}) piercing damage on a failed save, or half as much damage on a successful one.",
-						"The area becomes difficult terrain for the duration. When a creature ends its turn into the area or moves into or within the area, it takes {@damage 2d4} cold damage for every 5 feet it travels."
+						"The arcane feather throw a feather in a space within range that it sees and several ice feathers erupts from the original one in a 60-foot cone.",
+						"Each creature in the area must succeed on a {@dc 19} Constitution saving throw or take 36 ({@damage 8d8}) cold damage, or half as much damage on a successful one.",
+						"The affected area is covered with the ice feathers, making it {@quickref difficult terrain||3}. When a creature enters the area for the first time on a turn or starts its turn there, it must make a {@dc 19} Dexterity saving throw. On a failed save, it falls {@condition prone}."
+					]
+				},
+				{
+					"name": "Arcane Volley: Fire {@recharge 5}",
+					"entries": [
+						"The arcane feather throw a feather at a ally that make flames race across its body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for one minute. The flames doesn't harm the creature and it gains the following benefits:",
+						{
+							"type": "list",
+							"items": [
+								"The affected creature is immune to fire damage and have resistance to cold damage.",
+								"Any creature that moves within 5 feet of the creature affected for the first time on a turn or ends its turn there takes 5 ({@damage 1d10}) fire damage.",
+								"The affected creature can use its action to create a line of fire 15 feet long and 5 feet wide extending from them in a direction its choose. Each creature in the line must make a {@dc 19} Dexterity saving throw. A creature takes 18 ({@damage 4d8}) fire damage on a failed save, or half as much damage on a successful one."
+							]
+						},
+						"Then, a fiery explosion erupts from the target. Each creature in a 20-foot-radius sphere centered on the affected creature must make a {@dc 19} Dexterity saving throw. A target takes 14 ({@damage 4d6}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				},
+				{
+					"name": "Arcane Volley: Force {@recharge 5}",
+					"entries": [
+						"The arcane feather throw a feather in a space within range that it sees and implode in a 20-foot-radius sphere of crushing force that tugs the creatures there.",
+						"Each creature in the sphere must make a {@dc 19} Constitution saving throw. On a failed save, the creature takes 38 ({@damage 7d10}) force damage and is pulled in a straight line toward the center of the sphere, ending in an unoccupied space as close to the center as possible (even if that space is in the air). On a successful save, the creature takes half as much damage and isn't pulled."
+					]
+				},
+				{
+					"name": "Arcane Volley: Lightning {@recharge 5}",
+					"entries": [
+						"The arcane archer hurl a feather that transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within range. The lightning then travels from that target to as many as two other targets, each of which must be within 30 feet from the last target.",
+						"Each creature in those lines excluding you must make a {@dc 18} Dexterity saving throw. A creature takes 38 ({@damage 11d6}) lightning damage on a failed save, or half as much damage on a successful one.",
+						"If a creature is wearing something made of metal, the saving throw roll is made with disadvantage and the creature has its movement speed halved on a failed save."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Disrupting Feather (Recharges after a Short or Long Rest)",
+					"entries": [
+						"The arcane feather throw one feather at a creature in the process of casting a spell within range.",
+						"Make a black feather attack and If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an Intelligence ability check. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect."
 					]
 				}
 			],
@@ -150,47 +245,60 @@
 						"type": "image",
 						"href": {
 							"type": "external",
-							"url": "https://pm1.narvii.com/7122/90543c83d8ef8436dbc9dedb8f805aca91492d30r1-554-554v2_hq.jpg"
+							"url": "https://i.pinimg.com/564x/a9/e5/96/a9e5960c4b3156a50dd8e3e0140d05ba.jpg"
 						}
 					}
 				]
 			},
-			"tokenUrl": "https://s3.amazonaws.com/files.d20.io/images/242651234/TFwJUifGZB82LNdlKCs5ug/max.png",
+			"tokenUrl": "https://media.discordapp.net/attachments/979953749005049856/1087943434221916230/Token-MiKa-Kawlleg.png",
 			"traitTags": [
-				"Magic Resistance"
+				"Shapechanger"
 			],
 			"senseTags": [
-				"SD"
+				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
-				"AB",
-				"TP"
+				"AU",
+				"C",
+				"E",
+				"I"
 			],
 			"damageTags": [
-				"P"
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"S",
+				"Y"
 			],
 			"miscTags": [
-				"MW",
-				"RCH"
+				"AOE",
+				"RW"
 			],
 			"conditionInflict": [
-				"incapacitated",
-				"prone"
+				"charmed",
+				"incapacitated"
 			]
 		},
 		{
-			"name": "Terrorbeak",
+			"name": "Armored Boar Shade",
+			"isNpc": true,
 			"source": "AgentsofCaos",
 			"size": [
-				"M"
+				"H"
 			],
 			"type": {
-				"type": "fiend",
+				"type": "beast",
 				"tags": [
-					"demon"
+					"Shade"
 				]
 			},
 			"alignment": [
@@ -198,279 +306,36 @@
 				"E"
 			],
 			"ac": [
-				13
-			],
-			"hp": {
-				"average": 66,
-				"formula": "12d8 + 12"
-			},
-			"speed": {
-				"walk": 30,
-				"fly": 30
-			},
-			"str": 1,
-			"dex": 17,
-			"con": 12,
-			"int": 14,
-			"wis": 13,
-			"cha": 14,
-			"save": {
-				"dex": "+5",
-				"cha": "+4"
-			},
-			"skill": {
-				"stealth": "+7"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 11,
-			"resist": [
-				"acid",
-				"fire",
-				"necrotic",
-				"thunder",
 				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"cold",
-				"lightning",
-				"poison"
-			],
-			"vulnerable": [
-				"radiant"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained"
-			],
-			"languages": [
-				"Abyssal",
-				"telepathy 120 ft."
-			],
-			"cr": "4",
-			"trait": [
-				{
-					"name": "Incorporeal Movement",
-					"entries": [
-						"The terrorbeak can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
-					]
-				},
-				{
-					"name": "Light Sensitivity",
-					"entries": [
-						"While in bright light, the terrorbeak has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
-					]
-				},
-				{
-					"name": "Shadow Stealth",
-					"entries": [
-						"While in dim light or darkness, the terrorbeak can take the Hide action as a bonus action."
-					]
-				},
-				{
-					"name": "Shadow Eyes",
-					"entries": [
-						"The terrorbeak can see through magical darkness as if it was normal darkness."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}10 ({@damage 2d6 + 3}) psychic damage or, if the terrorbeak had advantage on the attack roll, 17 ({@damage 4d6 + 3}) psychic damage."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117832818393148/shadown_small.png"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/o5aYXAV.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5etools-mirror-1.github.io/audio/bestiary/shadow-demon.mp3"
-			},
-			"traitTags": [
-				"Incorporeal Movement",
-				"Light Sensitivity"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"languageTags": [
-				"AB",
-				"TP"
-			],
-			"damageTags": [
-				"O",
-				"Y"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Crawling Horror",
-			"source": "AgentsofCaos",
-			"size": [
-				"L"
-			],
-			"type": "fiend",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 13,
+					"ac": 21,
 					"from": [
 						"natural armor"
 					]
 				}
 			],
 			"hp": {
-				"average": 68,
-				"formula": "8d10 + 24"
+				"formula": "16d12 + 96",
+				"average": 200
 			},
 			"speed": {
-				"walk": 60,
-				"fly": 90
+				"walk": 50
 			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 10,
-			"wis": 13,
-			"cha": 15,
-			"passive": 11,
-			"resist": [
-				"radiant"
-			],
-			"languages": [
-				"understands Abyssal, Common, and Infernal but can't speak"
-			],
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Confer Radiant Resistance",
-					"entries": [
-						"The crawling horror can grant resistance to fire damage to anyone riding it."
-					]
-				},
-				{
-					"name": "Obscuration",
-					"entries": [
-						"The crawling horror have a 20-foot radius darkness aura."
-					]
-				},
-				{
-					"name": "Shadow Eyes",
-					"entries": [
-						"The crawling horror can see through magical darkness as if it was normal darkness."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Shadow Crunch",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) psychic damage plus 7 ({@damage 2d6}) necrotic damage."
-					]
-				},
-				{
-					"name": "Ethereal Stride",
-					"entries": [
-						"The crawling horror and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117861792645120/shadow_big.png"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/hdYs28e.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5etools-mirror-1.github.io/audio/bestiary/nightmare.mp3"
-			},
-			"languageTags": [
-				"AB",
-				"C",
-				"CS",
-				"I"
-			],
-			"damageTags": [
-				"N",
-				"Y"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Bomb",
-			"source": "AgentsofCaos",
-			"size": [
-				"M"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 102,
-				"formula": "12d10 + 36"
-			},
-			"speed": {
-				"fly": {
-					"number": 50,
-					"condition": "(hover)"
-				},
-				"canHover": true
-			},
-			"str": 10,
-			"dex": 17,
-			"con": 16,
+			"str": 22,
+			"dex": 19,
+			"con": 23,
 			"int": 6,
 			"wis": 10,
-			"cha": 7,
+			"cha": 14,
+			"save": {
+				"str": "+12",
+				"con": "+12",
+				"dex": "+10"
+			},
+			"skill": {
+				"athletics": "+18",
+				"intimidation": "+8",
+				"survival": "+6"
+			},
 			"senses": [
 				"darkvision 60 ft."
 			],
@@ -487,47 +352,42 @@
 				}
 			],
 			"immune": [
-				"fire",
+				"necrotic",
 				"poison"
 			],
 			"conditionImmune": [
-				"exhaustion",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"prone",
-				"restrained",
-				"unconscious"
+				"poisoned"
 			],
-			"languages": [
-				"Ignan"
-			],
-			"cr": "5",
+			"cr": "17",
 			"trait": [
 				{
-					"name": "Fire Form",
+					"name": "Relentless (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d10}) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 ({@damage 1d10}) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+						"If boar shade takes 50 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
 					]
 				},
 				{
-					"name": "Illumination",
+					"name": "Charge",
 					"entries": [
-						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet."
+						"If the boar shade moves at least 15 feet straight toward a target and then hits it with its shade tusks on the same turn, the target takes an extra 21 ({@dice 6d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone}."
 					]
 				},
 				{
-					"name": "Water Susceptibility",
+					"name": "Juggernaut (Only Armored)",
 					"entries": [
-						"For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage."
+						"The armored boar shade movement cannot be stopped and ignores difficult terrain. The armored boar shade is immune to become {@condition grappled}, {@condition restrained} and {@condition prone}."
 					]
 				},
 				{
-					"name": "Unstable Form",
+					"name": "Rune Armor",
 					"entries": [
-						"When the bomb is damaged by 1/3 its total hit points (25), it becomes large by inflating, loses its Fire Form and can self-destruct.",
-						"When the bomb reach 0 hit point, the Self-Destruction action is used, but dealing half its damage."
+						"The damage goes to the armor (150 hp), and it is resistant to all damage. When the Rune Armor is destroyed, the damage goes normally to the boar shade. The armor regenerates in (6 - active runes) turns."
+					]
+				},
+				{
+					"name": "Shade Essence",
+					"entries": [
+						"When the armor is "
 					]
 				}
 			],
@@ -535,92 +395,42 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The elemental makes two bite attacks."
+						"Boar shade makes two melee attacks: one with its tusks and one with its hooves."
 					]
 				},
 				{
-					"name": "Bite",
+					"name": "Armored Tusks",
 					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) slashing damage."
 					]
 				},
 				{
-					"name": "Self-Destruct",
+					"name": "Armored Hooves",
 					"entries": [
-						"The bomb loses stability and explodes ins a hurl of flames.",
-						"Each creature in a 20-foot-radius sphere centered on itself must make a {@dc 15} Dexterity saving throw. A target takes 28 ({@damage 8d6}) fire damage on a failed save, or half as much damage on a successful one."
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Armored Slam {@recharge}",
+					"entries": [
+						"Boar shade jumps to a place within range and falls violently. All creatures below and up to 10 ft. of the boar's landing must make a {@dc 19} Dexterity saving throw, taking 27 ({@damage 8d8}) bludgeoning damage on a failed save and being knocked {@condition prone}, or half as much damage on a successful one."
 					]
 				}
 			],
-			"environment": [
-				"desert"
-			],
 			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									"A faint humanoid shape threads through the core of this wild, moving flame. A fire elemental is a force of capricious devastation. Wherever it moves, it sets its surroundings ablaze, turning the world to ash, smoke, and cinders. Water can halt its destructive progress, causing the fire elemental to shrink back, hissing and smoking in pain and rage."
-								]
-							}
-						]
-					},
-					"Elementals are incarnations of the elements that make up the universe: air, earth, fire, and water. Though little more than animated energy on their own planes of existence, they can be called on by spellcasters and powerful beings to take shape and perform tasks.",
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Living Elements",
-										"entries": [
-											"On its home plane, an elemental is a bodiless life force. Its dim consciousness manifests as a physical shape only when focused by the power of magic. A wild spirit of elemental force has no desire except to course through the element of its native plane. Like beasts of the Material Plane, these elemental spirits have no society or culture, and little sense of being."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Conjured by Magic",
-										"entries": [
-											"Certain spells and magic items can conjure an elemental, summoning it from the Inner Planes to the Material Plane. Elementals instinctively resent being pulled from their native planes and bound into service. A creature that summons an elemental must assert force of will to control it."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Bound and Shaped",
-										"entries": [
-											"Powerful magic can bind an elemental spirit into a material template that defines a specific use and function. Invisible stalkers are air elementals bound to a specific form, in the same way that water elementals can be shaped into water weirds."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Elemental Nature",
-										"entries": [
-											"An elemental doesn't require air, food, drink, or sleep."
-										]
-									}
-								]
-							}
-						]
-					}
-				],
 				"images": [
 					{
 						"type": "image",
 						"href": {
 							"type": "external",
-							"url": "https://s3.amazonaws.com/files.d20.io/images/250043106/OPNzZslEpU6mJPocD2D8zQ/med.png?1634048291"
+							"url": "https://media.discordapp.net/attachments/908421018270466138/973771680864411700/shade_boar2.png"
 						}
 					}
 				]
 			},
-			"tokenUrl": "https://i.imgur.com/eDFoTW2.png",
+			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974531071733555210/unknown.png",
 			"traitTags": [
-				"Illumination"
+				"Charge"
 			],
 			"senseTags": [
 				"D"
@@ -628,845 +438,11 @@
 			"actionTags": [
 				"Multiattack"
 			],
-			"languageTags": [
-				"IG"
-			],
 			"damageTags": [
-				"C",
-				"F"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Campestri Singer",
-			"source": "AgentsofCaos",
-			"size": [
-				"T"
-			],
-			"type": "plant",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 2,
-				"formula": "1d4"
-			},
-			"speed": {
-				"walk": 5
-			},
-			"str": 1,
-			"dex": 7,
-			"con": 10,
-			"int": 4,
-			"wis": 10,
-			"cha": 8,
-			"skill": {
-				"perception": "+4"
-			},
-			"senses": [
-				"tremorsense 30 ft."
-			],
-			"passive": 14,
-			"languages": [
-				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
-			],
-			"cr": "0",
-			"trait": [
-				{
-					"name": "Mimicry",
-					"entries": [
-						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
-					]
-				},
-				{
-					"name": "Spore's Opera",
-					"entries": [
-						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must make a {@dc 10} saving throw according to the color of the campestri.",
-						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
-						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
-						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
-						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
-						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
-						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Head Butt",
-					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 bludgeoning damage."
-					]
-				},
-				{
-					"name": "Spores (1/Day)",
-					"entries": [
-						"A 5-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
-							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
-							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
-			"senseTags": [
-				"T"
-			],
-			"languageTags": [
-				"C",
-				"S"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"charmed",
-				"incapacitated"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Dragon Golem",
-			"source": "AgentsofCaos",
-			"size": [
-				"L"
-			],
-			"type": "construct",
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 19,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"formula": "21d10 + 126",
-				"average": 241
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 22,
-			"dex": 7,
-			"con": 22,
-			"int": 3,
-			"wis": 10,
-			"cha": 1,
-			"skill": {
-				"athletics": "+12"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 10,
-			"resist": [
-				"acid",
-				"cold",
-				"fire",
-				"poison"
-			],
-			"immune": [
-				{
-					"immune": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks not made with adamantine weapons"
-				},
-				{
-					"immune": [
-						"lightning"
-					]
-				}
-			],
-			"conditionImmune": [
-				"charmed",
-				"exhaustion",
-				"frightened",
-				"paralyzed",
-				"petrified",
-				"poisoned"
-			],
-			"languages": [
-				"understands the languages of its creator but can't speak"
-			],
-			"cr": "17",
-			"trait": [
-				{
-					"name": "Immutable Form",
-					"entries": [
-						"The golem is immune to any spell or effect that would alter its form."
-					]
-				},
-				{
-					"name": "Magic Resistance",
-					"entries": [
-						"The golem has advantage on saving throws against spells and other magical effects."
-					]
-				},
-				{
-					"name": "Magic Weapons",
-					"entries": [
-						"The golem's weapon attacks are magical."
-					]
-				},
-				{
-					"name": "Lightning Aura",
-					"entries": [
-						"At the start of each of the dragon golem's turns, each creature within 5 feet of it takes 10 ({@damage 3d6}) lightning damage. A creature that touches the dragon golem or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) lightning damage."
-					]
-				},
-				{
-					"name": "Iddle Recharge",
-					"entries": [
-						"At the start of its turn, if the dragon golem has not used any legendary actions until the end of its last turn, the dragon golem recharges its elemental breath."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The dragonflesh golem uses Terror Stare. It then makes three attacks: one with its bite and two with its claws."
-					]
-				},
-				{
-					"name": "Terror Stare",
-					"entries": [
-						"The dragonflesh golem chooses a creature that can see its eyes within 30 feet of it. The target must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the golem's Terror Stare for the next 24 hours."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d10 + 6}) piercing damage plus 5 ({@damage 1d10}) lightning damage plus 3 ({@damage 1d6}) damage of another type. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}16 ({@damage 3d6 + 6}) slashing damage."
-					]
-				},
-				{
-					"name": "Elemental Breath {@recharge 5}",
-					"entries": [
-						"The dragonflesh golem exhales energy in a 30-foot cone. Each creature in that area must make a {@dc 19} Dexterity saving throw, taking 28 ({@damage 8d6}) lightning damage and 28 ({@damage 8d6}) damage of another type on a failed save, or half as much damage on a successful one. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
-					]
-				}
-			],
-			"legendaryActions": 3,
-			"legendary": [
-				{
-					"name": "Move",
-					"entries": [
-						"The dragon golem can move up to its speed without causing attack of opportunity."
-					]
-				},
-				{
-					"name": "Claws",
-					"entries": [
-						"The dragon golem make a claw attack."
-					]
-				},
-				{
-					"name": "Lightning Nova (Costs 2 Actions)",
-					"entries": [
-						"A burst of lightning erupts from the dragon golem. Each creature within a range of 15-foot from the dragon golem must succeed on a {@dc 19} Constitution saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save or half as much on a success."
-					]
-				}
-			],
-			"legendaryGroup": {
-				"name": "Dragon Golem",
-				"source": "AgentsofCaos"
-			},
-			"environment": [
-				"arctic",
-				"badlands",
-				"coastal",
-				"desert",
-				"farmland",
-				"forest",
-				"grassland",
-				"hill",
-				"mountain",
-				"Planar",
-				"swamp",
-				"underdark",
-				"underwater",
-				"urban"
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									{
-										"type": "quote",
-										"entries": [
-											"A hulking being with a dragon's head and a patchwork of black, blue, green, red, and white scales for skin lurches forward on two legs, raising clawed fists into the air. Dragonflesh golems are rare constructs created from the remains of dead chromatic dragons."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Built from Dragon Corpses",
-										"entries": [
-											"Dragonflesh golems are powerful, but building such a creature requires great expense beyond the normal costs to create most other golems. The crafter must use the remains of five dragons, one of each color, of adult age or older. Mages looking to construct dragonflesh golems often hire adventurers to acquire the bodies they need."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Powered by Dragon Blood",
-										"entries": [
-											"Dragonflesh golems require frequent infusions of dragon blood to remain operational. This blood does not need to come from a true dragon; any creature with draconic blood will suffice."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Construct Nature",
-										"entries": [
-											"The dragonflesh golem doesn't require air, food, drink, or sleep."
-										]
-									}
-								]
-							}
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Dragonflesh Golem.webp"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/bWWEeOO.png",
-			"traitTags": [
-				"Immutable Form",
-				"Magic Resistance",
-				"Magic Weapons"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"actionTags": [
-				"Breath Weapon",
-				"Multiattack"
-			],
-			"languageTags": [
-				"CS"
-			],
-			"damageTags": [
-				"L",
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"frightened"
-			]
-		},
-		{
-			"name": "Gibberling Aberration",
-			"shortName": "Aberration",
-			"source": "AgentsofCaos",
-			"size": [
-				"H"
-			],
-			"type": "aberration",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				19
-			],
-			"hp": {
-				"formula": "24d12 + 168",
-				"average": 324
-			},
-			"speed": {
-				"walk": 20,
-				"swim": 20
-			},
-			"str": 18,
-			"dex": 8,
-			"con": 24,
-			"int": 3,
-			"wis": 14,
-			"cha": 6,
-			"senses": [
-				"blindsight 60 ft.",
-				"tremorsense 120 ft."
-			],
-			"passive": 12,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical weapons"
-				}
-			],
-			"conditionImmune": [
-				"grappled",
-				"prone"
-			],
-			"cr": "17",
-			"trait": [
-				{
-					"name": "Aberrant Ground",
-					"entries": [
-						"The ground in a 15-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 16} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
-					]
-				},
-				{
-					"name": "Gibbering",
-					"entries": [
-						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 30 feet of the aberration and can hear the gibbering must succeed on a {@dc 12} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d6} to determine what it does its turn. On a 1, the creature does nothing. On a 2 to 4, the creature takes no action or bonus action and walk towards the aberration. On a 5 or 6, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
-					]
-				},
-				{
-					"name": "Amorphous",
-					"entries": [
-						"The aberration can move through a space as narrow as 1 inch wide without squeezing."
-					]
-				},
-				{
-					"name": "Slimy",
-					"entries": [
-						"Attacking the aberration with a melee attack causes the weapon to get stuck on the aberration. On a melee attack, the creature must make a {@dc 14} Strength (athletics) or lose the weapon and the other attacks."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The gibbering aberration uses Engulf. It then makes two Pseudopod Bite attacks, and if it can, uses its Blinding Spittle."
-					]
-				},
-				{
-					"name": "Pseudopod Bite",
-					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 15 ft., one creature. {@h}18 ({@damage 3d8 + 4}) piercing damage. If the target is Large or smaller, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone} and {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the aberration can't use the same pseudopod bite on another target. If the aberration starts its turn grappling with a creature, it can use a bonus action to pull that creature within 5 feet of it."
-					]
-				},
-				{
-					"name": "Engulf",
-					"entries": [
-						"The aberration moves up to its speed. While doing so, it can enter Medium or smaller creatures' spaces. Whenever the aberration enters a creature's space, the creature must make a {@dc 16} Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the aberration. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the aberration enters the creature's space, and the creature takes 58 ({@damage 12d8 + 4}) piercing damage and is engulfed. While engulfed, the creature is {@condition blinded}, can't breathe, and {@condition restrained}, and takes 18 ({@damage 4d8}) piercing damage and 18 ({@damage 4d8}) acid damage at the start of each of the aberration's turns. lf the target is killed by this damage, it is absorbed into the aberration. When the aberration moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a {@dc 14} Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the horror. The aberration can have only up to two Medium or small creatures engulfed at a time."
-					]
-				},
-				{
-					"name": "Blinding Spittle {@recharge 5}",
-					"entries": [
-						"The aberration spits a blood ball at a point it can see within 25 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 16} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
-					]
-				},
-				{
-					"name": "Sorrowful Screech (Recharges on Dawn)",
-					"entries": [
-						"The aberration emits a terrible scream audible within 300 feet. Creatures within 30 feet of the aberration must succeed on a {@dc 16} Wisdom saving throw or be {@condition stunned} until the end of the aberration's next turn."
-					]
-				}
-			],
-			"legendaryGroup": {
-				"name": "Gibbering Aberration",
-				"source": "AgentsofCaos"
-			},
-			"environment": [
-				"swamp",
-				"underdark",
-				"urban"
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://cdn.discordapp.com/attachments/818155652891148309/906977643520479283/Carta_Utogh.png"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://cdn.discordapp.com/attachments/818155652891148309/906977621932392468/Utogh.png",
-			"traitTags": [
-				"Amorphous"
-			],
-			"senseTags": [
 				"B",
-				"T"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"A",
-				"P"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"blinded",
-				"grappled",
-				"prone",
-				"restrained",
-				"stunned"
-			]
-		},
-		{
-			"name": "Campestri Opera",
-			"source": "AgentsofCaos",
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "plant",
-				"swarmSize": "T"
-			},
-			"alignment": [
-				"U"
-			],
-			"ac": [
-				{
-					"ac": 12,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"formula": "6d8",
-				"average": 27
-			},
-			"speed": {
-				"walk": 5
-			},
-			"str": 3,
-			"dex": 7,
-			"con": 10,
-			"int": 4,
-			"wis": 10,
-			"cha": 8,
-			"skill": {
-				"perception": "+4"
-			},
-			"senses": [
-				"tremorsense 30 ft."
-			],
-			"passive": 14,
-			"resist": [
-				"bludgeoning",
-				"piercing",
-				"slashing"
-			],
-			"conditionImmune": [
-				"charmed",
-				"grappled",
-				"paralyzed",
-				"petrified",
-				"prone",
-				"restrained",
-				"stunned"
-			],
-			"languages": [
-				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
-			],
-			"cr": "1",
-			"trait": [
-				{
-					"name": "Mimicry",
-					"entries": [
-						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
-					]
-				},
-				{
-					"name": "Spore's Opera",
-					"entries": [
-						"When a creature enter for the first time or start its turn in a 15-foot radius area of the campestri, it must make a {@dc 13} saving throw according to the color of the campestri.",
-						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
-						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
-						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
-						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
-						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
-						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
-					]
-				},
-				{
-					"name": "Swarm",
-					"entries": [
-						"The campestri opera can occupy another creature's space and vice versa, and the swarm can move through any opening large enough to accommodate an individual campestri. The swarm can't regain hit points or gain temporary hit points."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Head Butt",
-					"entries": [
-						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h} 10 ({@damage 4d4}) bludgeoning damage, or 5 ({@damage 2d4}) bludgeoning damage if the swarm has half its hit points or fewer."
-					]
-				}
-			],
-			"reaction": [
-				{
-					"name": "Spores {@recharge 5}",
-					"entries": [
-						"A 20-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
-					]
-				}
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
-							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
-							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
-			"senseTags": [
-				"T"
-			],
-			"languageTags": [
-				"C",
 				"S"
 			],
-			"damageTags": [
-				"B"
-			],
 			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"charmed",
-				"incapacitated"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Large Earth Wisp",
-			"shortName": "Earth Wisp",
-			"source": "AgentsofCaos",
-			"size": [
-				"L"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				{
-					"ac": 18,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"formula": "16d10 + 80",
-				"average": 168
-			},
-			"speed": {
-				"walk": 30,
-				"burrow": 30
-			},
-			"str": 22,
-			"dex": 7,
-			"con": 21,
-			"int": 7,
-			"wis": 12,
-			"cha": 5,
-			"skill": {
-				"perception": "+5"
-			},
-			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
-			],
-			"passive": 15,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"thunder"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"unconscious"
-			],
-			"languages": [
-				"Terran"
-			],
-			"cr": "9",
-			"trait": [
-				{
-					"name": "Earth Glide",
-					"entries": [
-						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
-					]
-				},
-				{
-					"name": "Siege Monster",
-					"entries": [
-						"The earth wisp deals double damage to objects and structures."
-					]
-				},
-				{
-					"name": "Armor of Stones",
-					"entries": [
-						"This armor protects the earth wisp's core it can absorb up to 168 ({@dice 16d10 + 80}) points of damage.",
-						"The attack hits the core if the attack roll exceeds the elemental AC in:",
-						"Full HP: 5 or more",
-						"3/4 HP: 4 or more",
-						"1/2 HP: 3 or more",
-						"1/4 HP: 2 or more",
-						"The core receives damage without resistance."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The earth wisp makes two slam attacks."
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}23 ({@damage 4d8 + 5}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Tremor",
-					"entries": [
-						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 15} Dexterity saving throw or be knocked {@condition prone}."
-					]
-				}
-			],
-			"environment": [
-				"underdark"
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://i.pinimg.com/564x/dd/62/20/dd6220b3e8674bfba0ca86a156f87f47.jpg"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/4VI8cdH.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
-			},
-			"traitTags": [
-				"Siege Monster"
-			],
-			"senseTags": [
-				"D",
-				"T"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"T"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -1475,648 +451,6 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
-		},
-		{
-			"name": "Medium Earth Wisp",
-			"shortName": "Earth Wisp",
-			"source": "AgentsofCaos",
-			"size": [
-				"M"
-			],
-			"type": "elemental",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				15
-			],
-			"hp": {
-				"formula": "11d10 + 44",
-				"average": 104
-			},
-			"speed": {
-				"burrow": 30,
-				"fly": {
-					"number": 30,
-					"condition": "hover"
-				},
-				"canHover": true
-			},
-			"str": 16,
-			"dex": 4,
-			"con": 18,
-			"int": 5,
-			"wis": 10,
-			"cha": 5,
-			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
-			],
-			"passive": 10,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical attacks",
-					"cond": true
-				}
-			],
-			"immune": [
-				"poison"
-			],
-			"vulnerable": [
-				"thunder"
-			],
-			"conditionImmune": [
-				"exhaustion",
-				"paralyzed",
-				"petrified",
-				"poisoned",
-				"unconscious"
-			],
-			"languages": [
-				"Terran"
-			],
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Earth Glide",
-					"entries": [
-						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
-					]
-				},
-				{
-					"name": "Siege Monster",
-					"entries": [
-						"The earth wisp deals double damage to objects and structures."
-					]
-				},
-				{
-					"name": "Armor of Stones",
-					"entries": [
-						"This armor protects the earth wisp's core it can absorb up to 104 ({@dice 11d10 + 44}) points of damage.",
-						"The attack hits the core if the attack roll exceeds the elemental AC in:",
-						"Full HP: 5 or more",
-						"3/4 HP: 4 or more",
-						"1/2 HP: 3 or more",
-						"1/4 HP: 2 or more",
-						"The core receives damage without resistance."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The earth wisp makes two slam attacks."
-					]
-				},
-				{
-					"name": "Slam",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage."
-					]
-				},
-				{
-					"name": "Tremor",
-					"entries": [
-						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 12} Dexterity saving throw or be knocked {@condition prone}."
-					]
-				}
-			],
-			"environment": [
-				"underdark"
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://i.pinimg.com/564x/f5/ad/9c/f5ad9cfa2b55eed6b7928e4930cb2b96.jpg"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/vbVPxJk.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
-			},
-			"traitTags": [
-				"Siege Monster"
-			],
-			"senseTags": [
-				"D",
-				"T"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"T"
-			],
-			"damageTags": [
-				"B"
-			],
-			"miscTags": [
-				"AOE",
-				"MW",
-				"RCH"
-			],
-			"conditionInflict": [
-				"prone"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Eyepod",
-			"group": "Beholders",
-			"source": "AgentsofCaos",
-			"page": 126,
-			"size": [
-				"T"
-			],
-			"type": "aberration",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				13
-			],
-			"hp": {
-				"average": 13,
-				"formula": "3d4 + 6"
-			},
-			"speed": {
-				"walk": 0,
-				"climb": 30
-			},
-			"str": 3,
-			"dex": 17,
-			"con": 14,
-			"int": 3,
-			"wis": 12,
-			"cha": 7,
-			"save": {
-				"wis": "+3"
-			},
-			"skill": {
-				"perception": "+5",
-				"stealth": "+7"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 15,
-			"conditionImmune": [
-				"prone"
-			],
-			"cr": "1/2",
-			"trait": [
-				{
-					"name": "Aggressive",
-					"entries": [
-						"As a bonus action, the gazer can move up to its speed toward a hostile creature that it can see."
-					]
-				},
-				{
-					"name": "Mimicry",
-					"entries": [
-						"The Eyepod can mimic simple sounds of speech it has heard, in any language. A creature that hears the sounds can tell they are imitations with a successful {@dc 10} Wisdom (Insight) check."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
-					]
-				},
-				{
-					"name": "Eye Rays",
-					"entries": [
-						"The gazer shoots two of the following magical eye rays at random (reroll duplicates), choosing one or two targets it can see within 60 feet of it:",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "1. Dazing Ray.",
-									"style": "italic",
-									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition charmed} until the start of the gazer's next turn. While the target is {@condition charmed} in this way, its speed is halved, and it has disadvantage on attack rolls."
-								},
-								{
-									"type": "item",
-									"name": "2. Fear Ray.",
-									"style": "italic",
-									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition frightened} until the start of the gazer's next turn."
-								},
-								{
-									"type": "item",
-									"name": "3. Frost Ray.",
-									"style": "italic",
-									"entry": "The targeted creature must succeed on a {@dc 12} Dexterity saving throw or take 10 ({@damage 3d6}) cold damage."
-								},
-								{
-									"type": "item",
-									"name": "4. Telekinetic Ray.",
-									"style": "italic",
-									"entries": [
-										"If the target is a creature that is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or be moved up to 30 feet directly away from the gazer.",
-										"If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container."
-									]
-								}
-							]
-						}
-					]
-				}
-			],
-			"variant": [
-				{
-					"type": "variant",
-					"name": "Gazer Familiar",
-					"entries": [
-						"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
-						{
-							"type": "entries",
-							"name": "Familiar",
-							"entries": [
-								"The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
-							]
-						}
-					]
-				}
-			],
-			"environment": [
-				"underdark",
-				"urban"
-			],
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									{
-										"type": "entries",
-										"entries": [
-											"A gazer is a tiny manifestation of a beholder's dreams. It resembles the beholder who dreamed it into existence, but its body is only 8 inches wide, and it has only four eyestalks. It follows its creator like a devoted, aggressive puppy, and sometimes small packs of these creatures patrol their master's lair for vermin to kill and lone creatures to harass.",
-											{
-												"name": "Nuisance Pet",
-												"entries": [
-													" A gazer can't speak any languages but can approximate mimicking words and sentences in a high-pitched, mocking manner. Beholders find gazers amusing and tolerate their presence like spoiled pets. A gazer can't be tamed by anyone but its creator, except through the use of magic or by bonding with a spellcaster (see sidebar). Some beholders with wizard minions insist they take a gazer as a familiar because they can see through the eyes of these creatures."
-												],
-												"type": "entries"
-											},
-											{
-												"name": "Aggressive Vermin-Eater",
-												"entries": [
-													" A wild gazer (one living separately from a beholder) is territorial, eats bugs and small animals, and is known for playing with its food. A lone gazer avoids picking fights with creatures that are Medium or larger, but a pack of them might take on larger prey. A gazer might follow humanoids in its territory, noisily mimicking their speech and generally being a nuisance, until they leave the area, but it flees if confronted by something it can't kill."
-												],
-												"type": "entries"
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Variant: Gazer Familiar",
-										"entries": [
-											"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
-											{
-												"name": "Familiar",
-												"entries": [
-													" The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
-												],
-												"type": "entries"
-											}
-										]
-									}
-								]
-							}
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://static.wikia.nocookie.net/dragonquest/images/c/cc/DQVDS_-_Eyepod.png"
-						}
-					}
-				]
-			},
-			"familiar": true,
-			"tokenUrl": "https://5e.tools/img/VGM/Gazer.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5e.tools/audio/bestiary/gazer.mp3"
-			},
-			"traitTags": [
-				"Aggressive"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"damageTags": [
-				"C",
-				"P"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflict": [
-				"charmed",
-				"frightened"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Gibberling Spawn",
-			"shortName": "Spawn",
-			"source": "AgentsofCaos",
-			"size": [
-				"M"
-			],
-			"type": "aberration",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				14
-			],
-			"hp": {
-				"formula": "10d8 + 50",
-				"average": 95
-			},
-			"speed": {
-				"walk": 20,
-				"swim": 20
-			},
-			"str": 14,
-			"dex": 8,
-			"con": 20,
-			"int": 3,
-			"wis": 12,
-			"cha": 6,
-			"senses": [
-				"blindsight 60 ft.",
-				"tremorsense 120 ft."
-			],
-			"passive": 11,
-			"resist": [
-				{
-					"resist": [
-						"bludgeoning",
-						"piercing",
-						"slashing"
-					],
-					"note": "from nonmagical weapons"
-				}
-			],
-			"conditionImmune": [
-				"grappled",
-				"prone"
-			],
-			"cr": "5",
-			"trait": [
-				{
-					"name": "Aberrant Ground",
-					"entries": [
-						"The ground in a 10-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
-					]
-				},
-				{
-					"name": "Gibbering",
-					"entries": [
-						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 5 feet of the spawn and can hear the gibbering must succeed on a {@dc 10} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn."
-					]
-				},
-				{
-					"name": "Amorphous",
-					"entries": [
-						"The spawn can move through a space as narrow as 1 inch wide without squeezing."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack",
-					"entries": [
-						"The gibbering spawn makes two Bite attack, and if it can, uses its Blinding Spittle."
-					]
-				},
-				{
-					"name": "Bite",
-					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}16 ({@damage 4d6 + 2}) piercing damage. If the target is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or become {@condition grappled} (escape {@dc 12}). If the target is killed by this damage, it is absorbed into the spawn."
-					]
-				},
-				{
-					"name": "Blinding Spittle {@recharge 5}",
-					"entries": [
-						"The aberration spits a blood ball at a point it can see within 15 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 13} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
-					]
-				}
-			],
-			"environment": [
-				"swamp",
-				"underdark",
-				"urban"
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ebe276a-ab04-41d4-b88b-be949746fe0f/da4xozp-f688dc9b-ca72-4b8b-a88d-8affbbe42c68.jpg/v1/fill/w_1024,h_1681,q_75,strp/slime_girl_by_sans_art_da4xozp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY4MSIsInBhdGgiOiJcL2ZcLzVlYmUyNzZhLWFiMDQtNDFkNC1iODhiLWJlOTQ5NzQ2ZmUwZlwvZGE0eG96cC1mNjg4ZGM5Yi1jYTcyLTRiOGItYTg4ZC04YWZmYmJlNDJjNjguanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.NzcZ87h-kZYAj7TR-tDrCXm2NmDMwHZ0y0w0SGgTS2k"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/pGI6wRo.png",
-			"traitTags": [
-				"Amorphous"
-			],
-			"senseTags": [
-				"B",
-				"T"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"conditionInflict": [
-				"blinded",
-				"grappled"
-			]
-		},
-		{
-			"name": "Crawling Horror",
-			"source": "AgentsofCaos",
-			"size": [
-				"L"
-			],
-			"type": "fiend",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 68,
-				"formula": "8d10 + 24"
-			},
-			"speed": {
-				"walk": 60,
-				"fly": 90
-			},
-			"str": 18,
-			"dex": 15,
-			"con": 16,
-			"int": 10,
-			"wis": 13,
-			"cha": 15,
-			"passive": 11,
-			"resist": [
-				"radiant"
-			],
-			"languages": [
-				"understands Abyssal, Common, and Infernal but can't speak"
-			],
-			"cr": "3",
-			"trait": [
-				{
-					"name": "Confer Radiant Resistance",
-					"entries": [
-						"The crawling horror can grant resistance to radiant damage to anyone riding it."
-					]
-				},
-				{
-					"name": "Obscuration",
-					"entries": [
-						"The crawling horror have a 20-foot radius darkness aura."
-					]
-				},
-				{
-					"name": "Shadow Eyes",
-					"entries": [
-						"The crawling horror can see through magical darkness as if it was normal darkness."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Shadow Crunch",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) psychic damage plus 7 ({@damage 2d6}) necrotic damage."
-					]
-				},
-				{
-					"name": "Ethereal Stride",
-					"entries": [
-						"The crawling horror and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa."
-					]
-				}
-			],
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117861792645120/shadow_big.png"
-						}
-					}
-				]
-			},
-			"tokenUrl": "https://i.imgur.com/hdYs28e.png",
-			"soundClip": {
-				"type": "external",
-				"url": "https://5etools-mirror-1.github.io/audio/bestiary/nightmare.mp3"
-			},
-			"languageTags": [
-				"AB",
-				"C",
-				"CS",
-				"I"
-			],
-			"damageTags": [
-				"N",
-				"Y"
-			],
-			"miscTags": [
-				"AOE",
-				"MW"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true
-		},
-		{
-			"name": "Ás de Copas Negro",
-			"source": "AgentsofCaos",
-			"size": [
-				"M"
-			],
-			"type": "aberration",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"average": 4,
-				"formula": "1d8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 10,
-			"dex": 10,
-			"con": 10,
-			"int": 10,
-			"wis": 10,
-			"cha": 10,
-			"passive": 10,
-			"cr": "17",
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://i.pinimg.com/564x/71/80/61/718061466a59f7a78d761284596d88ab.jpg"
-						}
-					}
-				]
-			}
 		},
 		{
 			"name": "Armored Shade",
@@ -2566,53 +900,35 @@
 			"hasFluffImages": true
 		},
 		{
-			"name": "Armored Boar Shade",
-			"isNpc": true,
+			"name": "Bomb",
 			"source": "AgentsofCaos",
 			"size": [
-				"H"
+				"M"
 			],
-			"type": {
-				"type": "beast",
-				"tags": [
-					"Shade"
-				]
-			},
+			"type": "elemental",
 			"alignment": [
-				"C",
-				"E"
+				"N"
 			],
 			"ac": [
-				{
-					"ac": 21,
-					"from": [
-						"natural armor"
-					]
-				}
+				13
 			],
 			"hp": {
-				"formula": "16d12 + 96",
-				"average": 200
+				"average": 102,
+				"formula": "12d10 + 36"
 			},
 			"speed": {
-				"walk": 50
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
 			},
-			"str": 22,
-			"dex": 19,
-			"con": 23,
+			"str": 10,
+			"dex": 17,
+			"con": 16,
 			"int": 6,
 			"wis": 10,
-			"cha": 14,
-			"save": {
-				"str": "+12",
-				"con": "+12",
-				"dex": "+10"
-			},
-			"skill": {
-				"athletics": "+18",
-				"intimidation": "+8",
-				"survival": "+6"
-			},
+			"cha": 7,
 			"senses": [
 				"darkvision 60 ft."
 			],
@@ -2629,42 +945,47 @@
 				}
 			],
 			"immune": [
-				"necrotic",
+				"fire",
 				"poison"
 			],
 			"conditionImmune": [
-				"poisoned"
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
 			],
-			"cr": "17",
+			"languages": [
+				"Ignan"
+			],
+			"cr": "8",
 			"trait": [
 				{
-					"name": "Relentless (Recharges after a Short or Long Rest)",
+					"name": "Fire Form",
 					"entries": [
-						"If boar shade takes 50 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+						"The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 ({@damage 1d10}) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 ({@damage 1d10}) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
 					]
 				},
 				{
-					"name": "Charge",
+					"name": "Illumination",
 					"entries": [
-						"If the boar shade moves at least 15 feet straight toward a target and then hits it with its shade tusks on the same turn, the target takes an extra 21 ({@dice 6d6}) slashing damage. If the target is a creature, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone}."
+						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet."
 					]
 				},
 				{
-					"name": "Juggernaut (Only Armored)",
+					"name": "Water Susceptibility",
 					"entries": [
-						"The armored boar shade movement cannot be stopped and ignores difficult terrain. The armored boar shade is immune to become {@condition grappled}, {@condition restrained} and {@condition prone}."
+						"For every 5 feet the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage."
 					]
 				},
 				{
-					"name": "Rune Armor",
+					"name": "Unstable Form",
 					"entries": [
-						"The damage goes to the armor (150 hp), and it is resistant to all damage. When the Rune Armor is destroyed, the damage goes normally to the boar shade. The armor regenerates in (6 - active runes) turns."
-					]
-				},
-				{
-					"name": "Shade Essence",
-					"entries": [
-						"When the armor is "
+						"When the bomb is damaged by 1/3 its total hit points (25), it becomes large by inflating, loses its Fire Form and can self-destruct.",
+						"When the bomb reach 0 hit point, the Self-Destruction action is used, but dealing half its damage."
 					]
 				}
 			],
@@ -2672,25 +993,448 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Boar shade makes two melee attacks: one with its tusks and one with its hooves."
+						"The elemental makes two bite attacks."
 					]
 				},
 				{
-					"name": "Armored Tusks",
+					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) slashing damage."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 ({@damage 1d10}) fire damage at the start of each of its turns."
 					]
 				},
 				{
-					"name": "Armored Hooves",
+					"name": "Self-Destruct",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}27 ({@damage 6d6 + 6}) bludgeoning damage."
+						"The bomb loses stability and explodes ins a hurl of flames.",
+						"Each creature in a 20-foot-radius sphere centered on itself must make a {@dc 15} Dexterity saving throw. A target takes 28 ({@damage 8d6}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"desert"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"A faint humanoid shape threads through the core of this wild, moving flame. A fire elemental is a force of capricious devastation. Wherever it moves, it sets its surroundings ablaze, turning the world to ash, smoke, and cinders. Water can halt its destructive progress, causing the fire elemental to shrink back, hissing and smoking in pain and rage."
+								]
+							}
+						]
+					},
+					"Elementals are incarnations of the elements that make up the universe: air, earth, fire, and water. Though little more than animated energy on their own planes of existence, they can be called on by spellcasters and powerful beings to take shape and perform tasks.",
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Living Elements",
+										"entries": [
+											"On its home plane, an elemental is a bodiless life force. Its dim consciousness manifests as a physical shape only when focused by the power of magic. A wild spirit of elemental force has no desire except to course through the element of its native plane. Like beasts of the Material Plane, these elemental spirits have no society or culture, and little sense of being."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Conjured by Magic",
+										"entries": [
+											"Certain spells and magic items can conjure an elemental, summoning it from the Inner Planes to the Material Plane. Elementals instinctively resent being pulled from their native planes and bound into service. A creature that summons an elemental must assert force of will to control it."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Bound and Shaped",
+										"entries": [
+											"Powerful magic can bind an elemental spirit into a material template that defines a specific use and function. Invisible stalkers are air elementals bound to a specific form, in the same way that water elementals can be shaped into water weirds."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Elemental Nature",
+										"entries": [
+											"An elemental doesn't require air, food, drink, or sleep."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://s3.amazonaws.com/files.d20.io/images/250043106/OPNzZslEpU6mJPocD2D8zQ/med.png?1634048291"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/eDFoTW2.png",
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"IG"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Campestri Opera",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "plant",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d8",
+				"average": 27
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 3,
+			"dex": 7,
+			"con": 10,
+			"int": 4,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"languages": [
+				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
 					]
 				},
 				{
-					"name": "Armored Slam {@recharge}",
+					"name": "Spore's Opera",
 					"entries": [
-						"Boar shade jumps to a place within range and falls violently. All creatures below and up to 10 ft. of the boar's landing must make a {@dc 19} Dexterity saving throw, taking 27 ({@damage 8d8}) bludgeoning damage on a failed save and being knocked {@condition prone}, or half as much damage on a successful one."
+						"When a creature enter for the first time or start its turn in a 15-foot radius area of the campestri, it must make a {@dc 13} saving throw according to the color of the campestri.",
+						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
+						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
+						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
+						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
+						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
+						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
+					]
+				},
+				{
+					"name": "Swarm",
+					"entries": [
+						"The campestri opera can occupy another creature's space and vice versa, and the swarm can move through any opening large enough to accommodate an individual campestri. The swarm can't regain hit points or gain temporary hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Head Butt",
+					"entries": [
+						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h} 10 ({@damage 4d4}) bludgeoning damage, or 5 ({@damage 2d4}) bludgeoning damage if the swarm has half its hit points or fewer."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Spores {@recharge 5}",
+					"entries": [
+						"A 20-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
+							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
+							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
+			"senseTags": [
+				"T"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Campestri Singer",
+			"source": "AgentsofCaos",
+			"size": [
+				"T"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 1,
+			"dex": 7,
+			"con": 10,
+			"int": 4,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands Common and Sylvan but speaks only through the use of its Mimicry trait"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The campestri can mimic any voice or song it has heard, albeit in a nasal falsetto."
+					]
+				},
+				{
+					"name": "Spore's Opera",
+					"entries": [
+						"When a creature enter for the first time or start its turn in a 10-foot radius area of the campestri, it must make a {@dc 10} saving throw according to the color of the campestri.",
+						"• Red: (Wisdom) The creature is {@condition charmed} by the campestri.",
+						"• Blue: (Wisdom) The creature have disadvantage on the next attack roll it makes before the end of its next turn.",
+						"• Green: (Intelligence) The creature subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
+						"• Purple: (Wisdom) The creature use its reaction to run all its move speed away from the campestri.",
+						"• Yellow: (Wisdom) The creature falls into fits of laughter, falling {@condition prone}, becoming {@condition incapacitated} and unable to stand up while hearing the campestri.",
+						"At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the effect ends."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Head Butt",
+					"entries": [
+						"{@atk mw} {@hit 0} to hit, reach 5 ft., one target. {@h}1 bludgeoning damage."
+					]
+				},
+				{
+					"name": "Spores (1/Day)",
+					"entries": [
+						"A 5-foot radius of spores extends from the campestri. These spores can go around corners, and they have no effect on Constructs, Elementals, Plants, or Undead. Each other creature in the area must make a {@dc 10} Wisdom saving throw. On a failed save, the creature is {@condition incapacitated} and its speed is halved, both for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Campestris are happy-go-lucky mushroom-like creatures with few cares or worries. They are captivated by music, though they can't distinguish a well-played performance from a bad one. If anyone plays an instrument or sings in the campestris' vicinity, the little creatures will happily sing along, each in an obnoxiously nasal falsetto, as they dance and caper around whoever is making the music.",
+							"Campestris can easily imitate lyrics and music. After a campestri has practiced a song or a piece of music three or four times, the creature remembers it forever.",
+							"Campestris vary widely in color, from white to tan to dark brown, but they always have red or purple caps and speckles. A campestri moves by manipulating the mycelium that grows out of the base of its stem and supports it. The mushroom creatures eat salty soil, filter out the salt, and excrete a slippery paste of purified soil (stripped of things nourishing to fungi, of course). Eating salt is also a defense mechanism, because it makes the campestris taste salty and thus unpleasant to most creatures, though bullywugs consider them a delicacy."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.dndbeyond.com/attachments/8/922/campestris.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://5etools-mirror-1.github.io/img/WBtW/Campestri.png",
+			"senseTags": [
+				"T"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crawling Horror (balancear)",
+			"source": "AgentsofCaos",
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 90
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 13,
+			"cha": 15,
+			"passive": 11,
+			"resist": [
+				"radiant"
+			],
+			"languages": [
+				"understands Abyssal, Common, and Infernal but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Confer Radiant Resistance",
+					"entries": [
+						"The crawling horror can grant resistance to radiant damage to anyone riding it."
+					]
+				},
+				{
+					"name": "Obscuration",
+					"entries": [
+						"The crawling horror have a 20-foot radius darkness aura."
+					]
+				},
+				{
+					"name": "Shadow Eyes",
+					"entries": [
+						"The crawling horror can see through magical darkness as if it was normal darkness."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shadow Crunch",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) psychic damage plus 7 ({@damage 2d6}) necrotic damage."
+					]
+				},
+				{
+					"name": "Ethereal Stride",
+					"entries": [
+						"The crawling horror and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa."
 					]
 				}
 			],
@@ -2700,26 +1444,1251 @@
 						"type": "image",
 						"href": {
 							"type": "external",
-							"url": "https://media.discordapp.net/attachments/908421018270466138/973771680864411700/shade_boar2.png"
+							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117861792645120/shadow_big.png"
 						}
 					}
 				]
 			},
-			"tokenUrl": "https://media.discordapp.net/attachments/908421018270466138/974531071733555210/unknown.png",
+			"tokenUrl": "https://i.imgur.com/hdYs28e.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5etools-mirror-1.github.io/audio/bestiary/nightmare.mp3"
+			},
+			"languageTags": [
+				"AB",
+				"C",
+				"CS",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Deerclops",
+			"source": "AgentsofCaos",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "20d12 + 80",
+				"average": 210
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 24,
+			"dex": 16,
+			"con": 18,
+			"int": 8,
+			"wis": 14,
+			"cha": 18,
+			"save": {
+				"str": "+12",
+				"con": "+9"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't silvered"
+				}
+			],
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"conditionImmune": [
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "16",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The deerclops has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Lethargy Aura",
+					"entries": [
+						"Any creature hostile to the deerclops that enters or starts its turn within 20 feet of the deerclops must make a {@dc 18} Wisdom saving throw, unless the deerclops is {@condition incapacitated}. On a failed save, the creature have its movement speed halved until the start of its next turn."
+					]
+				},
+				{
+					"name": "Nimble footed",
+					"entries": [
+						"The deerclops ignores the extra movement cost of difficult terrains and have advantage to Strength (Athletics) saving throws to resist being {@condition restrained}."
+					]
+				},
+				{
+					"name": "Abyssal Eye",
+					"entries": [
+						"The deerclops can see through magical darkness as if it was normal darkness."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The deerclops makes four attacks with it's claws."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}22 ({@damage 3d8 + 7}) damage."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"The deerclops slams a creature {@condition grappled} by it on the floor, dealing 14 {@damage 2d6 + 7} bludgeoning damage plus 59 {@damage 8d12 + 7} piercing damage if slammed on the Ice Spikes, and is knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Ice Stomp {@recharge 5}",
+					"entries": [
+						"The deerclops stomps on the floor, creating 5ft. tall ice spikes in a 20 ft. radius area centered on itself. Each creature in that area must make a {@dc 18} Dexterity saving throw, taking 36 ({@damage 8d12 + 7}) piercing damage on a failed save, or half as much damage on a successful one.",
+						"The area becomes difficult terrain for the duration. When a creature ends its turn into the area or moves into or within the area, it takes {@damage 2d4} cold damage for every 5 feet it travels."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://pm1.narvii.com/7122/90543c83d8ef8436dbc9dedb8f805aca91492d30r1-554-554v2_hq.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://s3.amazonaws.com/files.d20.io/images/242651234/TFwJUifGZB82LNdlKCs5ug/max.png",
 			"traitTags": [
-				"Charge"
+				"Magic Resistance"
 			],
 			"senseTags": [
-				"D"
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"prone"
+			]
+		},
+		{
+			"name": "Dragon Golem",
+			"source": "AgentsofCaos",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "21d10 + 126",
+				"average": 241
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 7,
+			"con": 22,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"athletics": "+12"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"poison"
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with adamantine weapons"
+				},
+				{
+					"immune": [
+						"lightning"
+					]
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"The golem is immune to any spell or effect that would alter its form."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The golem has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"The golem's weapon attacks are magical."
+					]
+				},
+				{
+					"name": "Lightning Aura",
+					"entries": [
+						"At the start of each of the dragon golem's turns, each creature within 5 feet of it takes 10 ({@damage 3d6}) lightning damage. A creature that touches the dragon golem or hits it with a melee attack while within 5 feet of it takes 10 ({@damage 3d6}) lightning damage."
+					]
+				},
+				{
+					"name": "Iddle Recharge",
+					"entries": [
+						"At the start of its turn, if the dragon golem has not used any legendary actions until the end of its last turn, the dragon golem recharges its elemental breath."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dragonflesh golem uses Terror Stare. It then makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Terror Stare",
+					"entries": [
+						"The dragonflesh golem chooses a creature that can see its eyes within 30 feet of it. The target must succeed on a {@dc 17} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the golem's Terror Stare for the next 24 hours."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d10 + 6}) piercing damage plus 5 ({@damage 1d10}) lightning damage plus 3 ({@damage 1d6}) damage of another type. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit +12} to hit, reach 5 ft., one target. {@h}16 ({@damage 3d6 + 6}) slashing damage."
+					]
+				},
+				{
+					"name": "Elemental Breath {@recharge 5}",
+					"entries": [
+						"The dragonflesh golem exhales energy in a 30-foot cone. Each creature in that area must make a {@dc 19} Dexterity saving throw, taking 28 ({@damage 8d6}) lightning damage and 28 ({@damage 8d6}) damage of another type on a failed save, or half as much damage on a successful one. Roll a {@dice d4} to determine the additional damage type: 1 is acid, 2 is cold, 3 is fire, and 4 is poison."
+					]
+				}
+			],
+			"legendaryActions": 3,
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"The dragon golem can move up to its speed without causing attack of opportunity."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"The dragon golem make a claw attack."
+					]
+				},
+				{
+					"name": "Lightning Nova (Costs 2 Actions)",
+					"entries": [
+						"A burst of lightning erupts from the dragon golem. Each creature within a range of 15-foot from the dragon golem must succeed on a {@dc 19} Constitution saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save or half as much on a success."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Dragon Golem",
+				"source": "AgentsofCaos"
+			},
+			"environment": [
+				"arctic",
+				"badlands",
+				"coastal",
+				"desert",
+				"farmland",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain",
+				"Planar",
+				"swamp",
+				"underdark",
+				"underwater",
+				"urban"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"A hulking being with a dragon's head and a patchwork of black, blue, green, red, and white scales for skin lurches forward on two legs, raising clawed fists into the air. Dragonflesh golems are rare constructs created from the remains of dead chromatic dragons."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Built from Dragon Corpses",
+										"entries": [
+											"Dragonflesh golems are powerful, but building such a creature requires great expense beyond the normal costs to create most other golems. The crafter must use the remains of five dragons, one of each color, of adult age or older. Mages looking to construct dragonflesh golems often hire adventurers to acquire the bodies they need."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Powered by Dragon Blood",
+										"entries": [
+											"Dragonflesh golems require frequent infusions of dragon blood to remain operational. This blood does not need to come from a true dragon; any creature with draconic blood will suffice."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Construct Nature",
+										"entries": [
+											"The dragonflesh golem doesn't require air, food, drink, or sleep."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Dragonflesh Golem.webp"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/bWWEeOO.png",
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
+		},
+		{
+			"name": "Eyepod",
+			"group": "Beholders",
+			"source": "AgentsofCaos",
+			"page": 126,
+			"size": [
+				"T"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d4 + 6"
+			},
+			"speed": {
+				"walk": 0,
+				"climb": 30
+			},
+			"str": 3,
+			"dex": 17,
+			"con": 14,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+5",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"prone"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the gazer can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The Eyepod can mimic simple sounds of speech it has heard, in any language. A creature that hears the sounds can tell they are imitations with a successful {@dc 10} Wisdom (Insight) check."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}1 piercing damage."
+					]
+				},
+				{
+					"name": "Eye Rays",
+					"entries": [
+						"The gazer shoots two of the following magical eye rays at random (reroll duplicates), choosing one or two targets it can see within 60 feet of it:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1. Dazing Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition charmed} until the start of the gazer's next turn. While the target is {@condition charmed} in this way, its speed is halved, and it has disadvantage on attack rolls."
+								},
+								{
+									"type": "item",
+									"name": "2. Fear Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Wisdom saving throw or be {@condition frightened} until the start of the gazer's next turn."
+								},
+								{
+									"type": "item",
+									"name": "3. Frost Ray.",
+									"style": "italic",
+									"entry": "The targeted creature must succeed on a {@dc 12} Dexterity saving throw or take 10 ({@damage 3d6}) cold damage."
+								},
+								{
+									"type": "item",
+									"name": "4. Telekinetic Ray.",
+									"style": "italic",
+									"entries": [
+										"If the target is a creature that is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or be moved up to 30 feet directly away from the gazer.",
+										"If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Gazer Familiar",
+					"entries": [
+						"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
+						{
+							"type": "entries",
+							"name": "Familiar",
+							"entries": [
+								"The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
+							]
+						}
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"A gazer is a tiny manifestation of a beholder's dreams. It resembles the beholder who dreamed it into existence, but its body is only 8 inches wide, and it has only four eyestalks. It follows its creator like a devoted, aggressive puppy, and sometimes small packs of these creatures patrol their master's lair for vermin to kill and lone creatures to harass.",
+											{
+												"name": "Nuisance Pet",
+												"entries": [
+													" A gazer can't speak any languages but can approximate mimicking words and sentences in a high-pitched, mocking manner. Beholders find gazers amusing and tolerate their presence like spoiled pets. A gazer can't be tamed by anyone but its creator, except through the use of magic or by bonding with a spellcaster (see sidebar). Some beholders with wizard minions insist they take a gazer as a familiar because they can see through the eyes of these creatures."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "Aggressive Vermin-Eater",
+												"entries": [
+													" A wild gazer (one living separately from a beholder) is territorial, eats bugs and small animals, and is known for playing with its food. A lone gazer avoids picking fights with creatures that are Medium or larger, but a pack of them might take on larger prey. A gazer might follow humanoids in its territory, noisily mimicking their speech and generally being a nuisance, until they leave the area, but it flees if confronted by something it can't kill."
+												],
+												"type": "entries"
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Variant: Gazer Familiar",
+										"entries": [
+											"Spellcasters who are interested in unusual familiars find that gazers are eager to serve someone who has magical power, especially those who make a point of bullying and harassing others. The gazer behaves aggressively toward creatures smaller than itself, and it tends to randomly attack house pets, farm animals, and even children in town unless its master is very strict. A gazer serving as a familiar has the following trait.",
+											{
+												"name": "Familiar",
+												"entries": [
+													" The gazer can serve another creature as a familiar, forming a telepathic bond with its willing master, provided that the master is at least a 3rd-level spellcaster. While the two are bonded, the master can sense what the gazer senses as long as they are within 1 mile of each other. If its master causes it physical harm, the gazer will end its service as a familiar, breaking the telepathic bond."
+												],
+												"type": "entries"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://static.wikia.nocookie.net/dragonquest/images/c/cc/DQVDS_-_Eyepod.png"
+						}
+					}
+				]
+			},
+			"familiar": true,
+			"tokenUrl": "https://5e.tools/img/VGM/Gazer.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/gazer.mp3"
+			},
+			"traitTags": [
+				"Aggressive"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gibberling Aberration",
+			"shortName": "Aberration",
+			"source": "AgentsofCaos",
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				19
+			],
+			"hp": {
+				"formula": "24d12 + 168",
+				"average": 324
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 24,
+			"int": 3,
+			"wis": 14,
+			"cha": 6,
+			"senses": [
+				"blindsight 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
+			"conditionImmune": [
+				"grappled",
+				"prone"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Aberrant Ground",
+					"entries": [
+						"The ground in a 15-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 16} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+					]
+				},
+				{
+					"name": "Gibbering",
+					"entries": [
+						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 30 feet of the aberration and can hear the gibbering must succeed on a {@dc 12} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d6} to determine what it does its turn. On a 1, the creature does nothing. On a 2 to 4, the creature takes no action or bonus action and walk towards the aberration. On a 5 or 6, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
+					]
+				},
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The aberration can move through a space as narrow as 1 inch wide without squeezing."
+					]
+				},
+				{
+					"name": "Slimy",
+					"entries": [
+						"Attacking the aberration with a melee attack causes the weapon to get stuck on the aberration. On a melee attack, the creature must make a {@dc 14} Strength (athletics) or lose the weapon and the other attacks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gibbering aberration uses Engulf. It then makes two Pseudopod Bite attacks, and if it can, uses its Blinding Spittle."
+					]
+				},
+				{
+					"name": "Pseudopod Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} to hit, reach 15 ft., one creature. {@h}18 ({@damage 3d8 + 4}) piercing damage. If the target is Large or smaller, it must succeed on a {@dc 19} Strength saving throw or be knocked {@condition prone} and {@condition grappled} (escape {@dc 12}). Until the grapple ends, the target is {@condition restrained}, and the aberration can't use the same pseudopod bite on another target. If the aberration starts its turn grappling with a creature, it can use a bonus action to pull that creature within 5 feet of it."
+					]
+				},
+				{
+					"name": "Engulf",
+					"entries": [
+						"The aberration moves up to its speed. While doing so, it can enter Medium or smaller creatures' spaces. Whenever the aberration enters a creature's space, the creature must make a {@dc 16} Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the aberration. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the aberration enters the creature's space, and the creature takes 58 ({@damage 12d8 + 4}) piercing damage and is engulfed. While engulfed, the creature is {@condition blinded}, can't breathe, and {@condition restrained}, and takes 18 ({@damage 4d8}) piercing damage and 18 ({@damage 4d8}) acid damage at the start of each of the aberration's turns. lf the target is killed by this damage, it is absorbed into the aberration. When the aberration moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a {@dc 14} Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the horror. The aberration can have only up to two Medium or small creatures engulfed at a time."
+					]
+				},
+				{
+					"name": "Blinding Spittle {@recharge 5}",
+					"entries": [
+						"The aberration spits a blood ball at a point it can see within 25 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 16} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
+					]
+				},
+				{
+					"name": "Sorrowful Screech (Recharges on Dawn)",
+					"entries": [
+						"The aberration emits a terrible scream audible within 300 feet. Creatures within 30 feet of the aberration must succeed on a {@dc 16} Wisdom saving throw or be {@condition stunned} until the end of the aberration's next turn."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gibbering Aberration",
+				"source": "AgentsofCaos"
+			},
+			"environment": [
+				"swamp",
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/818155652891148309/906977643520479283/Carta_Utogh.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://cdn.discordapp.com/attachments/818155652891148309/906977621932392468/Utogh.png",
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"B",
+				"T"
 			],
 			"actionTags": [
 				"Multiattack"
 			],
 			"damageTags": [
-				"B",
-				"S"
+				"A",
+				"P"
 			],
 			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained",
+				"stunned"
+			]
+		},
+		{
+			"name": "Gibberling Spawn",
+			"shortName": "Spawn",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "10d8 + 50",
+				"average": 95
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 14,
+			"dex": 8,
+			"con": 20,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"senses": [
+				"blindsight 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons"
+				}
+			],
+			"conditionImmune": [
+				"grappled",
+				"prone"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Aberrant Ground",
+					"entries": [
+						"The ground in a 10-foot radius around the aberration is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
+					]
+				},
+				{
+					"name": "Gibbering",
+					"entries": [
+						"The aberration babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 5 feet of the spawn and can hear the gibbering must succeed on a {@dc 10} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn."
+					]
+				},
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The spawn can move through a space as narrow as 1 inch wide without squeezing."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The gibbering spawn makes two Bite attack, and if it can, uses its Blinding Spittle."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}16 ({@damage 4d6 + 2}) piercing damage. If the target is Medium or smaller, it must succeed on a {@dc 12} Strength saving throw or become {@condition grappled} (escape {@dc 12}). If the target is killed by this damage, it is absorbed into the spawn."
+					]
+				},
+				{
+					"name": "Blinding Spittle {@recharge 5}",
+					"entries": [
+						"The aberration spits a blood ball at a point it can see within 15 feet of it. The glob explodes in a splash of sticky blood on impact. Each creature within 5 feet of the splash must succeed on a {@dc 13} Dexterity saving throw or be {@condition blinded} until the end of the aberration's next turn."
+					]
+				}
+			],
+			"environment": [
+				"swamp",
+				"underdark",
+				"urban"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ebe276a-ab04-41d4-b88b-be949746fe0f/da4xozp-f688dc9b-ca72-4b8b-a88d-8affbbe42c68.jpg/v1/fill/w_1024,h_1681,q_75,strp/slime_girl_by_sans_art_da4xozp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY4MSIsInBhdGgiOiJcL2ZcLzVlYmUyNzZhLWFiMDQtNDFkNC1iODhiLWJlOTQ5NzQ2ZmUwZlwvZGE0eG96cC1mNjg4ZGM5Yi1jYTcyLTRiOGItYTg4ZC04YWZmYmJlNDJjNjguanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.NzcZ87h-kZYAj7TR-tDrCXm2NmDMwHZ0y0w0SGgTS2k"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/pGI6wRo.png",
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"B",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled"
+			]
+		},
+		{
+			"name": "Large Earth Wisp",
+			"shortName": "Earth Wisp",
+			"source": "AgentsofCaos",
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d10 + 80",
+				"average": 168
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 22,
+			"dex": 7,
+			"con": 21,
+			"int": 7,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Earth Glide",
+					"entries": [
+						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The earth wisp deals double damage to objects and structures."
+					]
+				},
+				{
+					"name": "Armor of Stones",
+					"entries": [
+						"This armor protects the earth wisp's core it can absorb up to 168 ({@dice 16d10 + 80}) points of damage.",
+						"The attack hits the core if the attack roll exceeds the elemental AC in:",
+						"Full HP: 5 or more",
+						"3/4 HP: 4 or more",
+						"1/2 HP: 3 or more",
+						"1/4 HP: 2 or more",
+						"The core receives damage without resistance."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The earth wisp makes two slam attacks."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}23 ({@damage 4d8 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Tremor",
+					"entries": [
+						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 15} Dexterity saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/dd/62/20/dd6220b3e8674bfba0ca86a156f87f47.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/4VI8cdH.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
+			},
+			"traitTags": [
+				"Siege Monster"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Medium Earth Wisp",
+			"shortName": "Earth Wisp",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "11d10 + 44",
+				"average": 104
+			},
+			"speed": {
+				"burrow": 30,
+				"fly": {
+					"number": 30,
+					"condition": "hover"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 4,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Earth Glide",
+					"entries": [
+						"The earth wisp can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"The earth wisp deals double damage to objects and structures."
+					]
+				},
+				{
+					"name": "Armor of Stones",
+					"entries": [
+						"This armor protects the earth wisp's core it can absorb up to 104 ({@dice 11d10 + 44}) points of damage.",
+						"The attack hits the core if the attack roll exceeds the elemental AC in:",
+						"Full HP: 5 or more",
+						"3/4 HP: 4 or more",
+						"1/2 HP: 3 or more",
+						"1/4 HP: 2 or more",
+						"The core receives damage without resistance."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The earth wisp makes two slam attacks."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Tremor",
+					"entries": [
+						"The earth wisp create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a {@dc 12} Dexterity saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/f5/ad/9c/f5ad9cfa2b55eed6b7928e4930cb2b96.jpg"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/vbVPxJk.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/earth-elemental.mp3"
+			},
+			"traitTags": [
+				"Siege Monster"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -2843,6 +2812,762 @@
 			"miscTags": [
 				"MW"
 			]
+		},
+		{
+			"name": "Solar Wolf (balancear)",
+			"source": "AgentsofCaos",
+			"basicRules": true,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "elemental",
+				"tags": [
+					"beast"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d10 + 28",
+				"average": 105
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50,
+				"fly": 50,
+				"canHover": false
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 15,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"force",
+						"radiant",
+						"thunder"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"The solar wolf has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The solar wolf has advantage on an attack roll against a creature if at least one of the solar wolf's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Supernova",
+					"entries": [
+						"Upon reaching 0 hit points, this form goes out ina fiery explosion. Creatures within 60 ft of the solar wolf must make a {@dc 15} Dexterity saving throw, taking {@dice 4d6} fire and {@damage 2d12} radiant damage on a fail or half as much on a success. If a creature fail the save throw by 5 or more, they are {@condition blinded}. The {@condition blinded} creature can make a {@dc 15} Constitution saving throw at the end of each of their turn to unblind themselves."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pulsar Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}36 ({@damage 5d12 + 4}) necrotic damage. If the target is a creature, it must succeed on a {@dc 15} Constitution saving throw or become {@condition blinded}. The {@condition blinded} creature can make a {@dc 15} Constitution saving throw at the end of each of their turn to unblind themselves."
+					]
+				},
+				{
+					"name": "Solar Flare {@recharge 5}",
+					"entries": [
+						"Your radiance changes from a light golden yellow to a blinding white light. Creatures within 30 ft of the solar wolf must make a {@dc 15} Constitution saving throw or take {@damage 5d12} radiant damage and be {@condition blinded} on a fail, or half that much damage on a success, and not being {@condition blinded}. The {@condition blinded} creature can make a {@dc 15} Constitution saving throw at the end of each of their turn to unblind themselves."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"hill"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/979953749005049856/979957399643381760/Solar_Wolf.jpg?width=663&height=663"
+						}
+					}
+				]
+			},
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/dire-wolf.mp3"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			]
+		},
+		{
+			"name": "Terrorbeak (balancear)",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 1,
+			"dex": 17,
+			"con": 12,
+			"int": 14,
+			"wis": 13,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"necrotic",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"lightning",
+				"poison"
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"The terrorbeak can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+					]
+				},
+				{
+					"name": "Light Sensitivity",
+					"entries": [
+						"While in bright light, the terrorbeak has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Shadow Stealth",
+					"entries": [
+						"While in dim light or darkness, the terrorbeak can take the Hide action as a bonus action."
+					]
+				},
+				{
+					"name": "Shadow Eyes",
+					"entries": [
+						"The terrorbeak can see through magical darkness as if it was normal darkness."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}10 ({@damage 2d6 + 3}) psychic damage or, if the terrorbeak had advantage on the attack roll, 17 ({@damage 4d6 + 3}) psychic damage."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/860205667171041312/895117832818393148/shadown_small.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://i.imgur.com/o5aYXAV.png",
+			"soundClip": {
+				"type": "external",
+				"url": "https://5etools-mirror-1.github.io/audio/bestiary/shadow-demon.mp3"
+			},
+			"traitTags": [
+				"Incorporeal Movement",
+				"Light Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Void Wolf (balancear)",
+			"source": "AgentsofCaos",
+			"basicRules": true,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "elemental",
+				"tags": [
+					"beast"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d10 + 28",
+				"average": 105
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50,
+				"fly": 50,
+				"canHover": false
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 15,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"force",
+						"radiant",
+						"thunder"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"The void wolf has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The void wolf has advantage on an attack roll against a creature if at least one of the void wolf's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Quasar",
+					"entries": [
+						"Upon reaching 0 hit points, this form devolves into a massive black hole. Creatures within 20 ft of the void wolf must make a Strength saving throw {@dc 15} or desapear as if affected by the spell banishment. While banished, the target is {@condition incapacitated}. The creature remain there until the end of the void wolf's next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Emptying Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}36 ({@damage 5d12 + 4}) necrotic damage. If the target is a creature, it must succeed on a {@dc 15} Wisdom saving throw or become {@condition frightened} as an overwhelming sense of dread seeps into their open wounds. They may repeat the save at the end of their turn."
+					]
+				},
+				{
+					"name": "Sphere of Nothingness {@recharge 5}",
+					"entries": [
+						"In a 20 ft radius centered on the void wolf, a sphere of pitch black grows engulfing the space. Inside the sphere creatures with darkvision can't see through the darkness, and nonmagical light can't illuminate it. Any creature or object entirely inside the sphere is imune to thunder damage, and creatures are {@condition deafened} while entirely it. Casting a spell that include a verbal component is impossible here.",
+						"The void wolf has blindsight of the area inside the sphere while inside it.",
+						"The sphere lasts until the end of your next turn or if you leave its radius."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"hill"
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://cdn.discordapp.com/attachments/979953749005049856/979953827765714954/Void_Wolf.jpg"
+						}
+					}
+				]
+			},
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/dire-wolf.mp3"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			]
+		},
+		{
+			"name": "Werecrow (WIP - Lycan)",
+			"shortName": "werecrow",
+			"source": "AgentsofCaos",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kenku"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "32d10 + 160",
+				"average": 336
+			},
+			"speed": {
+				"walk": 45,
+				"climb": 45
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 20,
+			"int": 10,
+			"wis": 20,
+			"cha": 8,
+			"save": {
+				"dex": "+13",
+				"int": "+6",
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"athletics": "+16",
+				"insight": "+11",
+				"perception": "+11"
+			},
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-silvered weapons"
+				}
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Keen Senses",
+					"entries": [
+						"The werecrow has advantage on Wisdom ({@skill Perception}) checks that rely on sight, hearing or smell."
+					]
+				},
+				{
+					"name": "Lycan Regeneration",
+					"entries": [
+						"The werecrow regains 10 hit points at the start of its turn if it has at least 1 hit point."
+					]
+				},
+				{
+					"name": "Branded to Die (Recharges after a Short or Long Rest)",
+					"entries": [
+						"When the werecrow damage a creature it can brand that creature. The werecrow always know the direction to the branded creature as long as it's on the same plane. The brand lasts until it is dismissed or until this feature is used again on another creature.",
+						"Further, whenever you hit the branded creature, you roll an additional ({@damage 1d10}) to the extra damage from the rite.",
+						"If a creature branded this way dies, the wereraven can use its reaction to transfer this brand to another damaged creature it can see within 60 ft. of the dead creature."
+					]
+				},
+				{
+					"name": "Relentless",
+					"entries": [
+						"If the werecrow takes 20 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The werecrow can use its action to polymorph into a wolf-humanoid hybrid or into a giant raven, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The werecrow can use make 4 attacks with its crimson claws."
+					]
+				},
+				{
+					"name": "Crimson Claws",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}16 ({@damage 2d8 + 7}) damage, plus 5 ({@damage 1d10}) damage of the type of the active Crimson Rite. The werecrow can also grapple the target (escape {@dc 14}) if it is a creature and the werecrow has a hand free."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Survival Instinct",
+					"entries": [
+						"Right after the werecrow use the relentless fature, it can make a melee attack against a creature within range."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/979953749005049856/1094005614960726056/kaijie-huang-20151229.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/867551529069051914/1094008205035704462/HendrieelllsKenkuBodyBuilder.png",
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Werecrow (WIP)",
+			"source": "AgentsofCaos",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kenku"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "32d10 + 160",
+				"average": 336
+			},
+			"speed": {
+				"walk": 45,
+				"climb": 45
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 20,
+			"int": 10,
+			"wis": 20,
+			"cha": 8,
+			"save": {
+				"dex": "+13",
+				"int": "+6",
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"athletics": "+16",
+				"insight": "+11",
+				"perception": "+11"
+			},
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-silvered weapons"
+				}
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Keen Senses",
+					"entries": [
+						"The werecrow has advantage on Wisdom ({@skill Perception}) checks that rely on sight, hearing or smell."
+					]
+				},
+				{
+					"name": "Lycan Regeneration",
+					"entries": [
+						"The werecrow regains 10 hit points at the start of its turn if it has at least 1 hit point."
+					]
+				},
+				{
+					"name": "Brand of the Voracious",
+					"entries": [
+						"The werecrow Brand of Castigation bind a foe to its hunter's ferocity. While in hybrid form, the werecrow have advantage on attack rolls against a creature branded by it."
+					]
+				},
+				{
+					"name": "Crimson Rite",
+					"entries": [
+						"The werecrow sacrifices 5 ({@damage 1d10}) hit points to activate or change the type of extra damage of the rite between fire, cold, lightning , necrotic, psychic  or thunder."
+					]
+				},
+				{
+					"name": "Branded to Die (Recharges after a Short or Long Rest)",
+					"entries": [
+						"When the werecrow damage a creature it can brand that creature. The werecrow always know the direction to the branded creature as long as it's on the same plane. The brand lasts until it is dismissed or until this feature is used again on another creature.",
+						"Further, whenever you hit the branded creature, you roll an additional ({@damage 1d10}) to the extra damage from the rite.",
+						"If a creature branded this way dies, the wereraven can use its reaction to transfer this brand to another damaged creature it can see within 60 ft. of the dead creature."
+					]
+				},
+				{
+					"name": "Whose blood is this?",
+					"entries": [
+						"When one creature takes damage while at 5 ft. from the wereraven, the wereraven can use it's Blood Curses or Crimson Rite without taking damage from the hemocraft die."
+					]
+				},
+				{
+					"name": "Relentless",
+					"entries": [
+						"If the werecrow takes 20 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The werecrow can use make 4 attacks with its crimson claws."
+					]
+				},
+				{
+					"name": "Crimson Claws",
+					"entries": [
+						"{@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}16 ({@damage 2d8 + 7}) damage, plus 5 ({@damage 1d10}) damage of the type of the active Crimson Rite. The werecrow can also grapple the target (escape {@dc 14}) if it is a creature and the werecrow has a hand free."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Blood Curse of Exposure",
+					"entries": [
+						"When a creature the werecrow can see within 30 feet of it takes damage from an attack or spell, it can use the reaction to temporarily weaken its resilience. Until the end of the target's next turn, it loses resistance to all the damage types dealt by the triggering attack or spell (including for that triggering effect).",
+						"The target instead loses invulnerability to the damage types of the triggering attack or spell, but has resistance to those damage types until the end of its next turn."
+					]
+				},
+				{
+					"name": "Survival Instinct",
+					"entries": [
+						"Right after the werecrow use the relentless fature, it can make a melee attack against a creature within range."
+					]
+				}
+			],
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://media.discordapp.net/attachments/979953749005049856/1094005614960726056/kaijie-huang-20151229.png"
+						}
+					}
+				]
+			},
+			"tokenUrl": "https://media.discordapp.net/attachments/867551529069051914/1094008205035704462/HendrieelllsKenkuBodyBuilder.png",
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Ás de Copas Negro (WIP)",
+			"source": "AgentsofCaos",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "17",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/71/80/61/718061466a59f7a78d761284596d88ab.jpg"
+						}
+					}
+				]
+			}
 		}
 	]
 }
